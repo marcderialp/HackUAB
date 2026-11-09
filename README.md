@@ -91,7 +91,7 @@ Everything is invented: people, customers, events and indicators. External addre
 |---|---|---|
 | 1 · Triage | ✅ | A ticket per alert in the organizers' format: verdict, cited evidence, severity and recommendation. Live mode for new alerts. |
 | 2 · Triage with judgment | ✅ | Clustering, the severity matrix with each asset's real criticality, authorized activity argued from approved changes, incidents. |
-| 3 · Investigation | ❌ | Incidents are grouped and shown in order, but no investigation report is written. |
+| 3 · Investigation | ❌ | Incidents are grouped and shown in order, but no investigation report is written.  |
 | 4 · Response | ✅ | Containment proposed per ticket, approved by a person and executed against the SOC API. |
 
 ## Quick start
