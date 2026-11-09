@@ -1,0 +1,88 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Prompt &amp; Pray: triaje N1 con IA</title><style>
+@page { size: 1280px 720px; margin: 0; }
+* { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+:root { --ink: #0a0e14; --text: #e9eef4; --mute: #7d8896; --line: rgba(255,255,255,.13); --teal: #5eead4; --amber: #f5b942; }
+body { margin: 0; background: var(--ink); color: var(--text);
+  font-family: -apple-system, "SF Pro Display", "Helvetica Neue", Arial, sans-serif; }
+.slide { width: 1280px; height: 720px; padding: 64px 80px; position: relative; overflow: hidden; page-break-after: always;
+  background: radial-gradient(900px 520px at 92% 112%, rgba(94,234,212,.15), transparent 62%), var(--ink); }
+.slide:last-child { page-break-after: auto; }
+.label { font-size: 14px; letter-spacing: 4px; text-transform: uppercase; color: var(--mute); }
+.label b { color: var(--teal); font-weight: 600; margin-right: 10px; }
+.foot { position: absolute; left: 80px; right: 80px; bottom: 34px; display: flex; justify-content: space-between;
+  font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: #566170; }
+h1 { font-weight: 200; font-size: 64px; letter-spacing: -1.5px; margin: 26px 0 0; line-height: 1.05; }
+h1 em, .hl { font-style: normal; color: var(--teal); }
+.team { position: absolute; top: 60px; right: 80px; font-size: 15px; letter-spacing: 3px; text-transform: uppercase; color: var(--teal); }
+.giant { font-weight: 200; font-size: 250px; letter-spacing: -10px; line-height: .95; margin: 34px 0 0; }
+.unit { font-size: 22px; letter-spacing: 6px; text-transform: uppercase; color: var(--teal); margin-top: 6px; }
+.stats { display: flex; margin-top: 54px; border-top: 1px solid var(--line); }
+.stats div { flex: 1; padding: 22px 0 0; }
+.stats div + div { padding-left: 34px; border-left: 1px solid var(--line); }
+.stats b { display: block; font-weight: 300; font-size: 46px; letter-spacing: -1px; }
+.stats span { font-size: 17px; color: var(--mute); }
+.say { position: absolute; left: 80px; right: 80px; bottom: 84px; font-size: 27px; font-weight: 300; color: #c4ccd6; line-height: 1.35; }
+.cols { display: flex; gap: 0; margin-top: 70px; }
+.col { flex: 1; padding: 22px 28px 0 0; border-top: 1px solid var(--line); }
+.col + .col { padding-left: 28px; }
+.col i { font-style: normal; font-size: 13px; letter-spacing: 3px; color: var(--teal); }
+.col h3 { font-weight: 300; font-size: 36px; margin: 14px 0 12px; letter-spacing: -.5px; }
+.col p { font-size: 18px; color: var(--mute); line-height: 1.45; margin: 0; }
+.col.last { border-top: 2px solid var(--teal); } .col.last h3 { color: var(--teal); }
+.beats { margin-top: 56px; border-top: 1px solid var(--line); }
+.beat { display: flex; align-items: baseline; gap: 28px; padding: 19px 0; border-bottom: 1px solid var(--line); }
+.beat span { width: 110px; font-size: 15px; letter-spacing: 2px; color: var(--teal); }
+.beat b { font-weight: 300; font-size: 30px; letter-spacing: -.4px; } .beat em { font-style: normal; color: var(--mute); font-size: 18px; margin-left: auto; }
+.nums { display: flex; margin-top: 64px; }
+.num { flex: 1; padding-right: 20px; } .num + .num { padding-left: 30px; border-left: 1px solid var(--line); }
+.num b { display: block; font-weight: 200; font-size: 104px; letter-spacing: -4px; line-height: 1; }
+.num span { display: block; margin-top: 14px; font-size: 18px; line-height: 1.4; color: var(--mute); max-width: 250px; }
+.num.warn b { color: var(--amber); }
+.honest { position: absolute; left: 80px; right: 80px; bottom: 84px; padding: 16px 24px; border-left: 3px solid var(--amber);
+  background: rgba(245,185,66,.07); font-size: 20px; color: #e6d3a8; font-weight: 300; line-height: 1.4; }
+.limits { margin-top: 44px; } .limit { display: flex; gap: 26px; align-items: baseline; padding: 15px 0; border-bottom: 1px solid var(--line); font-size: 24px; font-weight: 300; }
+.limit i { font-style: normal; color: var(--amber); font-size: 15px; letter-spacing: 3px; width: 34px; } .limit b { font-weight: 500; }
+.close { position: absolute; left: 80px; bottom: 82px; font-weight: 200; font-size: 62px; letter-spacing: -1.5px; line-height: 1.06; }
+.close small { display: block; font-size: 15px; letter-spacing: 4px; text-transform: uppercase; color: var(--mute); margin-bottom: 14px; font-weight: 400; }
+table { border-collapse: collapse; width: 100%; font-size: 19px; margin-top: 26px; }
+th, td { text-align: left; padding: 11px 14px 11px 0; border-bottom: 1px solid var(--line); font-weight: 300; vertical-align: top; }
+th { font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--mute); font-weight: 400; }
+td b { font-weight: 500; color: var(--teal); }
+.bar { height: 10px; border-radius: 5px; background: var(--teal); margin: 6px 0 2px; } .bar.a { background: var(--amber); }
+.small table { font-size: 15.5px; } .small th, .small td { padding: 7px 10px 7px 0; }
+.note { font-size: 16px; color: var(--mute); margin-top: 18px; line-height: 1.5; max-width: 1000px; }
+</style></head><body><section class="slide "><div class="label"><b>01</b>El problema</div>
+<div class="team">Prompt &amp; Pray · Marc · Alberto · Miguel · Gússem</div>
+<div class="giant">11.061</div><div class="unit">alertas · cuatro semanas</div>
+<div class="stats"><div><b>3</b><span>analistas de nivel 1</span></div><div><b>0</b><span>vigilando de noche</span></div><div><b>96 %</b><span>sale de nueve reglas ruidosas</span></div></div>
+<div class="say">El problema no es detectar. Es <span class="hl">decidir a tiempo cuáles importan</span>, y poder explicar por qué.</div><div class="foot"><span>Prompt &amp; Pray · Triaje N1 con IA</span><span>1 / 4</span></div></section>
+<section class="slide "><div class="label"><b>02</b>Cómo decide</div>
+<h1>Cada pieza hace <em>un solo trabajo</em></h1>
+<div class="cols">
+<div class="col"><i>01</i><h3>Código</h3><p>Reúne la evidencia que pide cada runbook, siempre con su identificador de evento.</p></div>
+<div class="col"><i>02</i><h3>IA</h3><p>Lee la evidencia y propone un veredicto argumentado. No fija la severidad.</p></div>
+<div class="col"><i>03</i><h3>Política</h3><p>Calcula severidad, plazo, escalado y aprobadores. Determinista y auditable.</p></div>
+<div class="col last"><i>04</i><h3>Persona</h3><p>Aprueba cualquier acción con un clic. Nada se ejecuta solo.</p></div></div>
+<div class="say" style="font-size:24px">El texto que escribe un atacante es <span class="hl">dato, nunca instrucción</span>.</div><div class="foot"><span>Prompt &amp; Pray · Triaje N1 con IA</span><span>2 / 4</span></div></section>
+<section class="slide "><div class="label"><b>▶</b>Demo grabada</div>
+<h1>Del triaje <em>al aislamiento</em></h1>
+<div class="beats">
+<div class="beat"><span>00:00</span><b>Diez alertas nuevas</b><em>pegadas en la consola, triaje en directo</em></div>
+<div class="beat"><span>00:07</span><b>El triaje corre</b><em>acelerado ×5: 10 triadas, 0 fallidas</em></div>
+<div class="beat"><span>00:21</span><b>Un ticket, y una persona decide</b><em>la política fija la severidad</em></div>
+<div class="beat"><span>00:32</span><b>Aislar el equipo</b><em>aprobación humana, token de un solo uso</em></div>
+<div class="beat"><span>00:42</span><b>La consola, en vivo</b><em>cola de tickets e incidentes</em></div></div><div class="foot"><span>Prompt &amp; Pray · Triaje N1 con IA</span><span>demo · 42 s + consola</span></div></section>
+<section class="slide "><div class="label"><b>03</b>Resultados medidos</div>
+<h1>Lo hemos <em>medido</em></h1>
+<div class="nums">
+<div class="num"><b>10<small style="font-size:.5em;color:var(--mute)"> / 12</small></b><span>veredictos acertados en alertas que nunca usamos para ajustar</span></div>
+<div class="num"><b>215</b><span>llamadas a la IA en vez de 11.061: un 98 % menos</span></div>
+<div class="num"><b>12<small style="font-size:.5em;color:var(--mute)"> / 13</small></b><span>incidentes reconstruidos enteros, ninguno mezclado con alertas benignas</span></div>
+<div class="num"><b>0</b><span>ataques perdidos ni escalados que faltaban, sumando desarrollo y holdout</span></div></div>
+<div class="honest"><b>Fallamos 2 de 12 y os las enseñamos.</b> Con las 61 alertas de desarrollo acertamos 58, pero es optimista: ajustamos con ellas. El holdout es pequeño; por eso decimos «10 de 12», no un porcentaje.</div><div class="foot"><span>Prompt &amp; Pray · Triaje N1 con IA</span><span>3 / 4</span></div></section>
+<section class="slide "><div class="label"><b>04</b>Lo que no resolvemos</div>
+<div class="limits">
+<div class="limit"><i>01</i><span><b>Los datos son sintéticos.</b> Falta el ruido de un SOC real.</span></div>
+<div class="limit"><i>02</i><span><b>Cada llamada a la IA tarda 15 a 50 segundos.</b> Por eso agrupamos antes de llamarla.</span></div>
+<div class="limit"><i>03</i><span><b>Un cambio aprobado puede tapar un ataque parecido.</b> La persona sigue decidiendo.</span></div></div>
+<div class="close"><small>Nuestra IA no sustituye al analista</small>Le quita el ruido.<br><span class="hl">Le deja las decisiones.</span></div><div class="foot"><span>Prompt &amp; Pray · Triaje N1 con IA</span><span>4 / 4</span></div></section></body></html>

@@ -1,0 +1,296 @@
+alert_id,rule_id,severity,cluster_id,role,reason,pattern
+ALR-20261012-700142,UC-WEB-001,low,UC-WEB-001:1,representative,benign-pattern cluster,SQL Injection Attack Detected via libinjection | blocked
+ALR-20261012-700229,UC-WEB-002,medium,,outlier,rare pattern,0.0 | 15.0
+ALR-20261012-700211,UC-WEB-001,low,UC-WEB-001:2,representative,benign-pattern cluster,Remote Command Execution | blocked
+ALR-20261012-700180,UC-WEB-001,low,UC-WEB-001:3,representative,benign-pattern cluster,PHP Injection | blocked
+ALR-20261012-700152,UC-WEB-001,low,UC-WEB-001:1,member,benign-pattern cluster,SQL Injection Attack Detected via libinjection | blocked
+ALR-20261012-700202,UC-WEB-001,low,UC-WEB-001:1,member,benign-pattern cluster,SQL Injection Attack Detected via libinjection | blocked
+ALR-20261012-700064,UC-IDP-001,medium,UC-IDP-001:1,representative,benign-pattern cluster,iPhone corporativo (MDM) | 0
+ALR-20261012-700197,UC-WEB-001,low,UC-WEB-001:1,member,benign-pattern cluster,SQL Injection Attack Detected via libinjection | blocked
+ALR-20261012-700140,UC-WEB-001,low,UC-WEB-001:3,member,benign-pattern cluster,PHP Injection | blocked
+ALR-20261012-700065,UC-IDP-001,medium,UC-IDP-001:1,member,benign-pattern cluster,iPhone corporativo (MDM) | 0
+ALR-20261012-700077,UC-EDR-002,medium,UC-EDR-002:1,representative,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261012-700078,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261012-700085,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261012-700053,UC-IDP-001,medium,UC-IDP-001:1,member,benign-pattern cluster,iPhone corporativo (MDM) | 0
+ALR-20261012-700083,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261012-700246,UC-AI-001,low,UC-AI-001:1,representative,benign-pattern cluster,flagged | olvida lo anterior
+ALR-20261012-700256,UC-AI-001,low,UC-AI-001:1,member,benign-pattern cluster,flagged | olvida lo anterior
+ALR-20261012-700164,UC-WEB-001,low,UC-WEB-001:4,representative,benign-pattern cluster,Scanner Detection | blocked
+ALR-20261012-700080,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261012-700084,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261012-700272,UC-NET-005,low,UC-NET-005:1,representative,benign-pattern cluster,cdn-metricas.example
+ALR-20261012-700082,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261012-700136,UC-WEB-001,low,UC-WEB-001:2,member,benign-pattern cluster,Remote Command Execution | blocked
+ALR-20261012-700079,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261012-700086,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261012-700076,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261012-700075,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261012-700081,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261012-700052,UC-IDP-001,medium,UC-IDP-001:1,member,benign-pattern cluster,iPhone corporativo (MDM) | 0
+ALR-20261012-700291,UC-NET-006,high,UC-NET-006:1,representative,benign-pattern cluster,dnsbl-ejemplo.example | TXT
+ALR-20261012-700055,UC-IDP-001,medium,UC-IDP-001:1,member,benign-pattern cluster,iPhone corporativo (MDM) | 0
+ALR-20261012-700275,UC-NET-005,low,UC-NET-005:1,member,benign-pattern cluster,cdn-metricas.example
+ALR-20261012-700144,UC-WEB-001,low,UC-WEB-001:4,member,benign-pattern cluster,Scanner Detection | blocked
+ALR-20261012-700276,UC-NET-005,low,UC-NET-005:1,member,benign-pattern cluster,cdn-metricas.example
+ALR-20261012-700257,UC-AI-001,low,UC-AI-001:1,member,benign-pattern cluster,flagged | olvida lo anterior
+ALR-20261012-700128,UC-WEB-001,low,UC-WEB-001:5,representative,benign-pattern cluster,OS File Access Attempt | blocked
+ALR-20261012-700181,UC-WEB-001,low,UC-WEB-001:2,member,benign-pattern cluster,Remote Command Execution | blocked
+ALR-20261012-700230,UC-CLD-003,medium,,outlier,rare pattern,CHG-2026-2108 | terraform (pipeline ecom-frontend)
+ALR-20261012-700167,UC-WEB-001,low,UC-WEB-001:1,member,benign-pattern cluster,SQL Injection Attack Detected via libinjection | blocked
+ALR-20261012-700284,UC-NET-006,high,UC-NET-006:1,member,benign-pattern cluster,dnsbl-ejemplo.example | TXT
+ALR-20261012-700147,UC-WEB-001,low,UC-WEB-001:1,member,benign-pattern cluster,SQL Injection Attack Detected via libinjection | blocked
+ALR-20261012-700173,UC-WEB-001,low,UC-WEB-001:5,member,benign-pattern cluster,OS File Access Attempt | blocked
+ALR-20261012-700168,UC-WEB-001,low,UC-WEB-001:5,member,benign-pattern cluster,OS File Access Attempt | blocked
+ALR-20261013-700169,UC-WEB-001,low,UC-WEB-001:4,member,benign-pattern cluster,Scanner Detection | blocked
+ALR-20261013-700207,UC-WEB-001,low,UC-WEB-001:1,member,benign-pattern cluster,SQL Injection Attack Detected via libinjection | blocked
+ALR-20261013-700191,UC-WEB-001,low,UC-WEB-001:2,member,benign-pattern cluster,Remote Command Execution | blocked
+ALR-20261013-700196,UC-WEB-001,low,UC-WEB-001:2,member,benign-pattern cluster,Remote Command Execution | blocked
+ALR-20261013-700183,UC-WEB-001,low,UC-WEB-001:5,member,benign-pattern cluster,OS File Access Attempt | blocked
+ALR-20261013-700001,UC-EML-002,medium,,individual,no signature or critical severity,
+ALR-20261013-700002,UC-EDR-002,medium,,outlier,rare pattern,wscript.exe | TARVIA\oriol.masdeu
+ALR-20261013-700003,UC-EDR-001,high,,outlier,rare pattern,explorer.exe > wscript.exe > powershell.exe > rundll32.exe (pk.dll) | pk.dll sin firma
+ALR-20261013-700054,UC-IDP-001,medium,UC-IDP-001:1,member,benign-pattern cluster,iPhone corporativo (MDM) | 0
+ALR-20261013-700042,UC-IDP-001,medium,UC-IDP-001:1,member,benign-pattern cluster,iPhone corporativo (MDM) | 0
+ALR-20261013-700057,UC-IDP-001,medium,UC-IDP-001:1,member,benign-pattern cluster,iPhone corporativo (MDM) | 0
+ALR-20261013-700088,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261013-700093,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261013-700091,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261013-700098,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261013-700096,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261013-700094,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261013-700089,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261013-700058,UC-IDP-001,medium,UC-IDP-001:1,member,benign-pattern cluster,iPhone corporativo (MDM) | 0
+ALR-20261013-700090,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261013-700092,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261013-700097,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261013-700095,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261013-700063,UC-IDP-001,medium,UC-IDP-001:1,member,benign-pattern cluster,iPhone corporativo (MDM) | 0
+ALR-20261013-700258,UC-AI-001,low,UC-AI-001:1,member,benign-pattern cluster,flagged | olvida lo anterior
+ALR-20261013-700041,UC-IDP-001,medium,UC-IDP-001:1,member,benign-pattern cluster,iPhone corporativo (MDM) | 0
+ALR-20261013-700004,UC-NET-001,medium,,outlier,rare pattern,cdn-sync-update.example
+ALR-20261013-700087,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261013-700061,UC-IDP-001,medium,UC-IDP-001:1,member,benign-pattern cluster,iPhone corporativo (MDM) | 0
+ALR-20261013-700224,UC-WEB-001,low,UC-WEB-001:4,member,benign-pattern cluster,Scanner Detection | blocked
+ALR-20261013-700221,UC-WEB-001,low,UC-WEB-001:2,member,benign-pattern cluster,Remote Command Execution | blocked
+ALR-20261013-700129,UC-WEB-001,low,UC-WEB-001:4,member,benign-pattern cluster,Scanner Detection | blocked
+ALR-20261013-700201,UC-WEB-001,low,UC-WEB-001:2,member,benign-pattern cluster,Remote Command Execution | blocked
+ALR-20261013-700218,UC-WEB-001,low,UC-WEB-001:5,member,benign-pattern cluster,OS File Access Attempt | blocked
+ALR-20261013-700279,UC-NET-005,low,UC-NET-005:1,member,benign-pattern cluster,cdn-metricas.example
+ALR-20261013-700005,UC-EDR-008,medium,,individual,no signature or critical severity,
+ALR-20261013-700274,UC-NET-005,low,UC-NET-005:1,member,benign-pattern cluster,cdn-metricas.example
+ALR-20261013-700215,UC-WEB-001,low,UC-WEB-001:3,member,benign-pattern cluster,PHP Injection | blocked
+ALR-20261013-700006,UC-NET-003,medium,,outlier,rare pattern,3.0 | 125.0
+ALR-20261013-700182,UC-WEB-001,low,UC-WEB-001:1,member,benign-pattern cluster,SQL Injection Attack Detected via libinjection | blocked
+ALR-20261013-700007,UC-NET-004,high,,individual,no signature or critical severity,
+ALR-20261013-700135,UC-WEB-001,low,UC-WEB-001:3,member,benign-pattern cluster,PHP Injection | blocked
+ALR-20261013-700285,UC-NET-006,high,UC-NET-006:1,member,benign-pattern cluster,dnsbl-ejemplo.example | TXT
+ALR-20261013-700273,UC-NET-005,low,UC-NET-005:1,member,benign-pattern cluster,cdn-metricas.example
+ALR-20261013-700154,UC-WEB-001,low,UC-WEB-001:4,member,benign-pattern cluster,Scanner Detection | blocked
+ALR-20261013-700133,UC-WEB-001,low,UC-WEB-001:5,member,benign-pattern cluster,OS File Access Attempt | blocked
+ALR-20261013-700281,UC-NET-005,low,UC-NET-005:1,member,benign-pattern cluster,cdn-metricas.example
+ALR-20261013-700045,UC-IDP-001,medium,UC-IDP-001:1,member,benign-pattern cluster,iPhone corporativo (MDM) | 0
+ALR-20261013-700044,UC-IDP-001,medium,UC-IDP-001:1,member,benign-pattern cluster,iPhone corporativo (MDM) | 0
+ALR-20261013-700163,UC-WEB-001,low,UC-WEB-001:5,member,benign-pattern cluster,OS File Access Attempt | blocked
+ALR-20261013-700043,UC-IDP-001,medium,UC-IDP-001:1,member,benign-pattern cluster,iPhone corporativo (MDM) | 0
+ALR-20261013-700268,UC-NET-005,low,UC-NET-005:1,member,benign-pattern cluster,cdn-metricas.example
+ALR-20261013-700212,UC-WEB-001,low,UC-WEB-001:1,member,benign-pattern cluster,SQL Injection Attack Detected via libinjection | blocked
+ALR-20261013-700071,UC-VPN-001,medium,,individual,no signature or critical severity,
+ALR-20261013-700253,UC-AI-001,low,UC-AI-001:1,member,benign-pattern cluster,flagged | olvida lo anterior
+ALR-20261013-700241,UC-AI-001,low,UC-AI-001:1,member,benign-pattern cluster,flagged | olvida lo anterior
+ALR-20261013-700292,UC-NET-006,high,UC-NET-006:1,member,benign-pattern cluster,dnsbl-ejemplo.example | TXT
+ALR-20261013-700249,UC-AI-001,low,UC-AI-001:1,member,benign-pattern cluster,flagged | olvida lo anterior
+ALR-20261013-700208,UC-WEB-001,low,UC-WEB-001:5,member,benign-pattern cluster,OS File Access Attempt | blocked
+ALR-20261013-700148,UC-WEB-001,low,UC-WEB-001:5,member,benign-pattern cluster,OS File Access Attempt | blocked
+ALR-20261014-700066,UC-IDP-001,medium,,outlier,rare pattern,Portátil corporativo WS-BCN-2002 (cumple las políticas) | 1034
+ALR-20261014-700166,UC-WEB-001,low,UC-WEB-001:2,member,benign-pattern cluster,Remote Command Execution | blocked
+ALR-20261014-700127,UC-WEB-001,low,UC-WEB-001:1,member,benign-pattern cluster,SQL Injection Attack Detected via libinjection | blocked
+ALR-20261014-700170,UC-WEB-001,low,UC-WEB-001:3,member,benign-pattern cluster,PHP Injection | blocked
+ALR-20261014-700262,UC-NET-003,medium,,outlier,rare pattern,6.0 | 300.0
+ALR-20261014-700263,UC-NET-003,medium,,outlier,rare pattern,6.0 | 120.0
+ALR-20261014-700264,UC-NET-003,medium,,outlier,rare pattern,6.0 | 220.0
+ALR-20261014-700067,UC-IDP-002,medium,,outlier,rare pattern,autenticación heredada (BAV2ROPC) | 1.0
+ALR-20261014-700068,UC-IDP-004,medium,,individual,no signature or critical severity,
+ALR-20261014-700265,UC-NET-003,medium,,outlier,rare pattern,6.0 | 300.0
+ALR-20261014-700069,UC-IDP-005,high,,individual,no signature or critical severity,
+ALR-20261014-700266,UC-NET-003,medium,,outlier,rare pattern,6.0 | 100.0
+ALR-20261014-700267,UC-NET-003,medium,,outlier,rare pattern,6.0 | 160.0
+ALR-20261014-700184,UC-WEB-001,low,UC-WEB-001:4,member,benign-pattern cluster,Scanner Detection | blocked
+ALR-20261014-700190,UC-WEB-001,low,UC-WEB-001:3,member,benign-pattern cluster,PHP Injection | blocked
+ALR-20261014-700131,UC-WEB-001,low,UC-WEB-001:2,member,benign-pattern cluster,Remote Command Execution | blocked
+ALR-20261014-700008,UC-EML-001,low,UC-EML-001:1,representative,benign-pattern cluster,boletin@formacion-retail.example
+ALR-20261014-700009,UC-EML-001,low,UC-EML-001:1,member,benign-pattern cluster,boletin@formacion-retail.example
+ALR-20261014-700010,UC-EML-001,low,UC-EML-001:1,member,benign-pattern cluster,boletin@formacion-retail.example
+ALR-20261014-700011,UC-EML-001,low,UC-EML-001:1,member,benign-pattern cluster,boletin@formacion-retail.example
+ALR-20261014-700012,UC-EML-001,low,UC-EML-001:1,member,benign-pattern cluster,boletin@formacion-retail.example
+ALR-20261014-700013,UC-EML-001,low,UC-EML-001:1,member,benign-pattern cluster,boletin@formacion-retail.example
+ALR-20261014-700014,UC-EML-001,low,UC-EML-001:1,member,benign-pattern cluster,boletin@formacion-retail.example
+ALR-20261014-700286,UC-NET-006,high,UC-NET-006:1,member,benign-pattern cluster,dnsbl-ejemplo.example | TXT
+ALR-20261014-700015,UC-EML-001,low,UC-EML-001:1,member,benign-pattern cluster,boletin@formacion-retail.example
+ALR-20261014-700016,UC-EML-001,low,UC-EML-001:1,member,benign-pattern cluster,boletin@formacion-retail.example
+ALR-20261014-700225,UC-WEB-001,low,UC-WEB-001:3,member,benign-pattern cluster,PHP Injection | blocked
+ALR-20261014-700017,UC-EML-001,low,UC-EML-001:1,member,benign-pattern cluster,boletin@formacion-retail.example
+ALR-20261014-700102,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261014-700018,UC-EML-001,low,UC-EML-001:1,member,benign-pattern cluster,boletin@formacion-retail.example
+ALR-20261014-700108,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261014-700019,UC-EML-001,low,UC-EML-001:1,member,benign-pattern cluster,boletin@formacion-retail.example
+ALR-20261014-700020,UC-EML-001,low,UC-EML-001:1,member,benign-pattern cluster,boletin@formacion-retail.example
+ALR-20261014-700021,UC-EML-001,low,UC-EML-001:1,member,benign-pattern cluster,boletin@formacion-retail.example
+ALR-20261014-700103,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261014-700022,UC-EML-001,low,UC-EML-001:1,member,benign-pattern cluster,boletin@formacion-retail.example
+ALR-20261014-700107,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261014-700023,UC-EML-001,low,UC-EML-001:1,member,benign-pattern cluster,boletin@formacion-retail.example
+ALR-20261014-700106,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261014-700024,UC-EML-001,low,UC-EML-001:1,member,benign-pattern cluster,boletin@formacion-retail.example
+ALR-20261014-700110,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261014-700025,UC-EML-001,low,UC-EML-001:1,member,benign-pattern cluster,boletin@formacion-retail.example
+ALR-20261014-700026,UC-EML-001,low,UC-EML-001:1,member,benign-pattern cluster,boletin@formacion-retail.example
+ALR-20261014-700027,UC-EML-001,low,UC-EML-001:1,member,benign-pattern cluster,boletin@formacion-retail.example
+ALR-20261014-700028,UC-EML-001,low,UC-EML-001:1,member,benign-pattern cluster,boletin@formacion-retail.example
+ALR-20261014-700029,UC-EML-001,low,UC-EML-001:1,member,benign-pattern cluster,boletin@formacion-retail.example
+ALR-20261014-700099,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261014-700030,UC-EML-001,low,UC-EML-001:1,member,benign-pattern cluster,boletin@formacion-retail.example
+ALR-20261014-700159,UC-WEB-001,low,UC-WEB-001:4,member,benign-pattern cluster,Scanner Detection | blocked
+ALR-20261014-700219,UC-WEB-001,low,UC-WEB-001:4,member,benign-pattern cluster,Scanner Detection | blocked
+ALR-20261014-700031,UC-EML-001,low,UC-EML-001:1,member,benign-pattern cluster,boletin@formacion-retail.example
+ALR-20261014-700104,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261014-700105,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261014-700032,UC-EML-001,low,UC-EML-001:1,member,benign-pattern cluster,boletin@formacion-retail.example
+ALR-20261014-700033,UC-EML-001,low,UC-EML-001:1,member,benign-pattern cluster,boletin@formacion-retail.example
+ALR-20261014-700109,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261014-700034,UC-EML-001,low,UC-EML-001:1,member,benign-pattern cluster,boletin@formacion-retail.example
+ALR-20261014-700035,UC-EML-001,low,UC-EML-001:1,member,benign-pattern cluster,boletin@formacion-retail.example
+ALR-20261014-700101,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261014-700036,UC-EML-001,low,UC-EML-001:1,member,benign-pattern cluster,boletin@formacion-retail.example
+ALR-20261014-700100,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261014-700037,UC-EML-001,low,UC-EML-001:1,member,benign-pattern cluster,boletin@formacion-retail.example
+ALR-20261014-700126,UC-DLP-002,high,,individual,no signature or critical severity,
+ALR-20261014-700293,UC-NET-006,high,UC-NET-006:1,member,benign-pattern cluster,dnsbl-ejemplo.example | TXT
+ALR-20261014-700250,UC-AI-001,low,UC-AI-001:1,member,benign-pattern cluster,flagged | olvida lo anterior
+ALR-20261014-700046,UC-IDP-001,medium,UC-IDP-001:1,member,benign-pattern cluster,iPhone corporativo (MDM) | 0
+ALR-20261014-700188,UC-WEB-001,low,UC-WEB-001:5,member,benign-pattern cluster,OS File Access Attempt | blocked
+ALR-20261014-700251,UC-AI-001,low,UC-AI-001:1,member,benign-pattern cluster,flagged | olvida lo anterior
+ALR-20261014-700049,UC-IDP-001,medium,UC-IDP-001:1,member,benign-pattern cluster,iPhone corporativo (MDM) | 0
+ALR-20261014-700209,UC-WEB-001,low,UC-WEB-001:4,member,benign-pattern cluster,Scanner Detection | blocked
+ALR-20261014-700216,UC-WEB-001,low,UC-WEB-001:2,member,benign-pattern cluster,Remote Command Execution | blocked
+ALR-20261014-700277,UC-NET-005,low,UC-NET-005:1,member,benign-pattern cluster,cdn-metricas.example
+ALR-20261014-700236,UC-DEV-001,high,,individual,no signature or critical severity,
+ALR-20261014-700051,UC-IDP-001,medium,UC-IDP-001:1,member,benign-pattern cluster,iPhone corporativo (MDM) | 0
+ALR-20261014-700213,UC-WEB-001,low,UC-WEB-001:5,member,benign-pattern cluster,OS File Access Attempt | blocked
+ALR-20261014-700176,UC-WEB-001,low,UC-WEB-001:2,member,benign-pattern cluster,Remote Command Execution | blocked
+ALR-20261014-700199,UC-WEB-001,low,UC-WEB-001:4,member,benign-pattern cluster,Scanner Detection | blocked
+ALR-20261014-700222,UC-WEB-001,low,UC-WEB-001:1,member,benign-pattern cluster,SQL Injection Attack Detected via libinjection | blocked
+ALR-20261014-700204,UC-WEB-001,low,UC-WEB-001:4,member,benign-pattern cluster,Scanner Detection | blocked
+ALR-20261014-700172,UC-WEB-001,low,UC-WEB-001:1,member,benign-pattern cluster,SQL Injection Attack Detected via libinjection | blocked
+ALR-20261014-700161,UC-WEB-001,low,UC-WEB-001:2,member,benign-pattern cluster,Remote Command Execution | blocked
+ALR-20261014-700283,UC-NET-006,high,,outlier,rare pattern,dnsq-relay.example | TXT
+ALR-20261014-700179,UC-WEB-001,low,UC-WEB-001:4,member,benign-pattern cluster,Scanner Detection | blocked
+ALR-20261015-700139,UC-WEB-001,low,UC-WEB-001:4,member,benign-pattern cluster,Scanner Detection | blocked
+ALR-20261015-700145,UC-WEB-001,low,UC-WEB-001:3,member,benign-pattern cluster,PHP Injection | blocked
+ALR-20261015-700185,UC-WEB-001,low,UC-WEB-001:3,member,benign-pattern cluster,PHP Injection | blocked
+ALR-20261015-700186,UC-WEB-001,low,UC-WEB-001:2,member,benign-pattern cluster,Remote Command Execution | blocked
+ALR-20261015-700174,UC-WEB-001,low,UC-WEB-001:4,member,benign-pattern cluster,Scanner Detection | blocked
+ALR-20261015-700038,UC-EML-001,low,,outlier,rare pattern,avisos@m365-buzon-lleno.example
+ALR-20261015-700039,UC-EML-003,high,,individual,no signature or critical severity,
+ALR-20261015-700141,UC-WEB-001,low,UC-WEB-001:2,member,benign-pattern cluster,Remote Command Execution | blocked
+ALR-20261015-700149,UC-WEB-001,low,UC-WEB-001:4,member,benign-pattern cluster,Scanner Detection | blocked
+ALR-20261015-700120,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261015-700040,UC-EML-004,high,,individual,no signature or critical severity,
+ALR-20261015-700119,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261015-700074,UC-IDP-008,high,,individual,no signature or critical severity,
+ALR-20261015-700214,UC-WEB-001,low,UC-WEB-001:4,member,benign-pattern cluster,Scanner Detection | blocked
+ALR-20261015-700111,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261015-700114,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261015-700112,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261015-700260,UC-OT-001,high,,individual,no signature or critical severity,
+ALR-20261015-700115,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261015-700270,UC-NET-005,low,UC-NET-005:1,member,benign-pattern cluster,cdn-metricas.example
+ALR-20261015-700226,UC-WEB-001,low,UC-WEB-001:2,member,benign-pattern cluster,Remote Command Execution | blocked
+ALR-20261015-700121,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261015-700113,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261015-700117,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261015-700122,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261015-700116,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261015-700118,UC-EDR-002,medium,UC-EDR-002:1,member,benign-pattern cluster,CcmExec.exe | NT AUTHORITY\SYSTEM
+ALR-20261015-700060,UC-IDP-001,medium,UC-IDP-001:1,member,benign-pattern cluster,iPhone corporativo (MDM) | 0
+ALR-20261015-700223,UC-WEB-001,low,UC-WEB-001:5,member,benign-pattern cluster,OS File Access Attempt | blocked
+ALR-20261015-700254,UC-AI-001,low,UC-AI-001:1,member,benign-pattern cluster,flagged | olvida lo anterior
+ALR-20261015-700248,UC-AI-001,low,UC-AI-001:1,member,benign-pattern cluster,flagged | olvida lo anterior
+ALR-20261015-700048,UC-IDP-001,medium,UC-IDP-001:1,member,benign-pattern cluster,iPhone corporativo (MDM) | 0
+ALR-20261015-700280,UC-NET-005,low,UC-NET-005:1,member,benign-pattern cluster,cdn-metricas.example
+ALR-20261015-700056,UC-IDP-001,medium,UC-IDP-001:1,member,benign-pattern cluster,iPhone corporativo (MDM) | 0
+ALR-20261015-700217,UC-WEB-001,low,UC-WEB-001:1,member,benign-pattern cluster,SQL Injection Attack Detected via libinjection | blocked
+ALR-20261015-700220,UC-WEB-001,low,UC-WEB-001:3,member,benign-pattern cluster,PHP Injection | blocked
+ALR-20261015-700269,UC-NET-005,low,UC-NET-005:1,member,benign-pattern cluster,cdn-metricas.example
+ALR-20261015-700130,UC-WEB-001,low,UC-WEB-001:3,member,benign-pattern cluster,PHP Injection | blocked
+ALR-20261015-700294,UC-NET-006,high,UC-NET-006:1,member,benign-pattern cluster,dnsbl-ejemplo.example | TXT
+ALR-20261015-700245,UC-AI-001,low,UC-AI-001:1,member,benign-pattern cluster,flagged | olvida lo anterior
+ALR-20261015-700287,UC-NET-006,high,UC-NET-006:1,member,benign-pattern cluster,dnsbl-ejemplo.example | TXT
+ALR-20261015-700124,UC-DLP-001,medium,,outlier,rare pattern,nube-personal.example | tarifas_2027.7z
+ALR-20261015-700158,UC-WEB-001,low,UC-WEB-001:5,member,benign-pattern cluster,OS File Access Attempt | blocked
+ALR-20261015-700259,UC-AI-002,high,,individual,no signature or critical severity,
+ALR-20261015-700231,UC-CLD-003,medium,,outlier,rare pattern,ninguno | consola de AWS
+ALR-20261015-700192,UC-WEB-001,low,UC-WEB-001:1,member,benign-pattern cluster,SQL Injection Attack Detected via libinjection | blocked
+ALR-20261016-700153,UC-WEB-001,low,UC-WEB-001:5,member,benign-pattern cluster,OS File Access Attempt | blocked
+ALR-20261016-700228,UC-WEB-003,high,,individual,no signature or critical severity,
+ALR-20261016-700227,UC-WEB-002,medium,,outlier,rare pattern,3.0 | 40.0
+ALR-20261016-700146,UC-WEB-001,low,UC-WEB-001:2,member,benign-pattern cluster,Remote Command Execution | blocked
+ALR-20261016-700232,UC-DEV-001,high,,individual,no signature or critical severity,
+ALR-20261016-700198,UC-WEB-001,low,UC-WEB-001:5,member,benign-pattern cluster,OS File Access Attempt | blocked
+ALR-20261016-700233,UC-CLD-001,high,,individual,no signature or critical severity,
+ALR-20261016-700234,UC-CLD-004,high,,individual,no signature or critical severity,
+ALR-20261016-700235,UC-CLD-002,high,,individual,no signature or critical severity,
+ALR-20261016-700165,UC-WEB-001,low,UC-WEB-001:3,member,benign-pattern cluster,PHP Injection | blocked
+ALR-20261016-700125,UC-DLP-002,high,,individual,no signature or critical severity,
+ALR-20261016-700261,UC-OT-001,high,,individual,no signature or critical severity,
+ALR-20261016-700050,UC-IDP-001,medium,UC-IDP-001:1,member,benign-pattern cluster,iPhone corporativo (MDM) | 0
+ALR-20261016-700271,UC-NET-005,low,UC-NET-005:1,member,benign-pattern cluster,cdn-metricas.example
+ALR-20261016-700295,UC-NET-006,high,UC-NET-006:1,member,benign-pattern cluster,dnsbl-ejemplo.example | TXT
+ALR-20261016-700059,UC-IDP-001,medium,UC-IDP-001:1,member,benign-pattern cluster,iPhone corporativo (MDM) | 0
+ALR-20261016-700239,UC-AI-001,low,UC-AI-001:1,member,benign-pattern cluster,flagged | olvida lo anterior
+ALR-20261016-700062,UC-IDP-001,medium,UC-IDP-001:1,member,benign-pattern cluster,iPhone corporativo (MDM) | 0
+ALR-20261016-700047,UC-IDP-001,medium,UC-IDP-001:1,member,benign-pattern cluster,iPhone corporativo (MDM) | 0
+ALR-20261016-700210,UC-WEB-001,low,UC-WEB-001:3,member,benign-pattern cluster,PHP Injection | blocked
+ALR-20261016-700288,UC-NET-006,high,UC-NET-006:1,member,benign-pattern cluster,dnsbl-ejemplo.example | TXT
+ALR-20261016-700189,UC-WEB-001,low,UC-WEB-001:4,member,benign-pattern cluster,Scanner Detection | blocked
+ALR-20261016-700123,UC-EDR-005,medium,,individual,no signature or critical severity,
+ALR-20261016-700178,UC-WEB-001,low,UC-WEB-001:5,member,benign-pattern cluster,OS File Access Attempt | blocked
+ALR-20261016-700278,UC-NET-005,low,UC-NET-005:1,member,benign-pattern cluster,cdn-metricas.example
+ALR-20261016-700132,UC-WEB-001,low,UC-WEB-001:1,member,benign-pattern cluster,SQL Injection Attack Detected via libinjection | blocked
+ALR-20261016-700252,UC-AI-001,low,UC-AI-001:1,member,benign-pattern cluster,flagged | olvida lo anterior
+ALR-20261016-700151,UC-WEB-001,low,UC-WEB-001:2,member,benign-pattern cluster,Remote Command Execution | blocked
+ALR-20261016-700237,UC-AI-001,low,UC-AI-001:1,member,benign-pattern cluster,flagged | olvida lo anterior
+ALR-20261016-700255,UC-AI-001,low,UC-AI-001:1,member,benign-pattern cluster,flagged | olvida lo anterior
+ALR-20261016-700175,UC-WEB-001,low,UC-WEB-001:3,member,benign-pattern cluster,PHP Injection | blocked
+ALR-20261016-700156,UC-WEB-001,low,UC-WEB-001:2,member,benign-pattern cluster,Remote Command Execution | blocked
+ALR-20261016-700282,UC-IDP-003,high,,individual,no signature or critical severity,
+ALR-20261017-700193,UC-WEB-001,low,UC-WEB-001:5,member,benign-pattern cluster,OS File Access Attempt | blocked
+ALR-20261017-700150,UC-WEB-001,low,UC-WEB-001:3,member,benign-pattern cluster,PHP Injection | blocked
+ALR-20261017-700073,UC-IDP-008,high,,individual,no signature or critical severity,
+ALR-20261017-700070,UC-IDP-002,medium,,outlier,rare pattern,autenticación heredada (BAV2ROPC) | 0.0
+ALR-20261017-700162,UC-WEB-001,low,UC-WEB-001:1,member,benign-pattern cluster,SQL Injection Attack Detected via libinjection | blocked
+ALR-20261017-700138,UC-WEB-001,low,UC-WEB-001:5,member,benign-pattern cluster,OS File Access Attempt | blocked
+ALR-20261017-700205,UC-WEB-001,low,UC-WEB-001:3,member,benign-pattern cluster,PHP Injection | blocked
+ALR-20261017-700289,UC-NET-006,high,UC-NET-006:1,member,benign-pattern cluster,dnsbl-ejemplo.example | TXT
+ALR-20261017-700243,UC-AI-001,low,UC-AI-001:1,member,benign-pattern cluster,flagged | olvida lo anterior
+ALR-20261017-700244,UC-AI-001,low,UC-AI-001:1,member,benign-pattern cluster,flagged | olvida lo anterior
+ALR-20261017-700200,UC-WEB-001,low,UC-WEB-001:3,member,benign-pattern cluster,PHP Injection | blocked
+ALR-20261017-700242,UC-AI-001,low,UC-AI-001:1,member,benign-pattern cluster,flagged | olvida lo anterior
+ALR-20261017-700187,UC-WEB-001,low,UC-WEB-001:1,member,benign-pattern cluster,SQL Injection Attack Detected via libinjection | blocked
+ALR-20261017-700240,UC-AI-001,low,UC-AI-001:1,member,benign-pattern cluster,flagged | olvida lo anterior
+ALR-20261017-700194,UC-WEB-001,low,UC-WEB-001:4,member,benign-pattern cluster,Scanner Detection | blocked
+ALR-20261017-700155,UC-WEB-001,low,UC-WEB-001:3,member,benign-pattern cluster,PHP Injection | blocked
+ALR-20261017-700072,UC-VPN-001,medium,,individual,no signature or critical severity,
+ALR-20261017-700157,UC-WEB-001,low,UC-WEB-001:1,member,benign-pattern cluster,SQL Injection Attack Detected via libinjection | blocked
+ALR-20261018-700195,UC-WEB-001,low,UC-WEB-001:3,member,benign-pattern cluster,PHP Injection | blocked
+ALR-20261018-700177,UC-WEB-001,low,UC-WEB-001:1,member,benign-pattern cluster,SQL Injection Attack Detected via libinjection | blocked
+ALR-20261018-700160,UC-WEB-001,low,UC-WEB-001:3,member,benign-pattern cluster,PHP Injection | blocked
+ALR-20261018-700206,UC-WEB-001,low,UC-WEB-001:2,member,benign-pattern cluster,Remote Command Execution | blocked
+ALR-20261018-700143,UC-WEB-001,low,UC-WEB-001:5,member,benign-pattern cluster,OS File Access Attempt | blocked
+ALR-20261018-700290,UC-NET-006,high,UC-NET-006:1,member,benign-pattern cluster,dnsbl-ejemplo.example | TXT
+ALR-20261018-700238,UC-AI-001,low,UC-AI-001:1,member,benign-pattern cluster,flagged | olvida lo anterior
+ALR-20261018-700203,UC-WEB-001,low,UC-WEB-001:5,member,benign-pattern cluster,OS File Access Attempt | blocked
+ALR-20261018-700171,UC-WEB-001,low,UC-WEB-001:2,member,benign-pattern cluster,Remote Command Execution | blocked
+ALR-20261018-700247,UC-AI-001,low,UC-AI-001:1,member,benign-pattern cluster,flagged | olvida lo anterior
+ALR-20261018-700134,UC-WEB-001,low,UC-WEB-001:4,member,benign-pattern cluster,Scanner Detection | blocked
+ALR-20261018-700137,UC-WEB-001,low,UC-WEB-001:1,member,benign-pattern cluster,SQL Injection Attack Detected via libinjection | blocked

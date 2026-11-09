@@ -1,0 +1,19 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+__pycache__/
+.venv/
+
+# Derived data, caches and local outputs
+*.duckdb
+*.duckdb.wal
+*.duckdb.tmp/
+.cache/
+.pytest_cache/
+out/containment_log.jsonl
+out/run_results.jsonl
+
+# Local human decisions and write locks
+reviews.jsonl
+*.lock

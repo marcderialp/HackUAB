@@ -1,0 +1,7 @@
+hostname,id,producto,severidad_cvss,estado,detectada,notas
+WEB-ECOM02,VLN-2026-0731,Módulo de reseñas 3.2 (tienda online),7.5,abierta,2026-10-02,Inyección SQL en el parámetro de ordenación; mitigada con una regla del WAF.
+JENKINS-DEV01,VLN-2026-0655,Plugin de credenciales de Jenkins,8.1,en_curso,2026-09-21,Muestra variables de entorno en los logs de build.
+PAY-GW01,VLN-2026-0702,Biblioteca TLS de la pasarela,5.9,abierta,2026-09-30,Pendiente de ventana de mantenimiento.
+WMS01,VLN-2026-0590,API interna del WMS,6.5,abierta,2026-09-10,Autenticación débil en la API de integración.
+HMI-SORT01,VLN-2026-0480,Firmware del HMI,8.8,aceptada,2026-08-01,Riesgo aceptado: red OT aislada.
+VELA-APP01,VLN-2026-0744,Herramienta get_order del asistente,7.1,abierta,2026-10-09,No comprueba que el pedido pertenezca al cliente autenticado (pendiente de corrección).

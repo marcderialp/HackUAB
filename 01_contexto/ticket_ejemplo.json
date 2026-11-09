@@ -1,0 +1,52 @@
+{
+  "ticket_id": "TKT-EJEMPLO-0001",
+  "alert_ids": [
+    "ALR-20261014-700000"
+  ],
+  "title": "Boletín de un proveedor de formación notificado como phishing",
+  "verdict": "false_positive",
+  "confidence": 0.88,
+  "severity": "informational",
+  "severity_rationale": "Falso positivo: no hay incidente que puntuar.",
+  "affected": {
+    "users": [
+      "persona.ejemplo"
+    ],
+    "hosts": [],
+    "business_services": [],
+    "customers": []
+  },
+  "summary": "Un empleado notificó como phishing el boletín semanal de un proveedor de formación. El remitente envía cada semana, SPF, DKIM y DMARC son correctos y el enlace lleva a su propia web. Nadie introdujo credenciales.",
+  "evidence": [
+    {
+      "source": "email",
+      "event_id": "EML-7000000",
+      "finding": "SPF, DKIM y DMARC correctos; el remitente ya había escrito antes"
+    }
+  ],
+  "enrichment": [
+    {
+      "indicator": "formacion-retail.example",
+      "type": "domain",
+      "source": "ti_feed",
+      "result": "benign"
+    }
+  ],
+  "mitre": [],
+  "recommended_actions": [
+    {
+      "action": "close",
+      "target": "ticket",
+      "requires_approval": false,
+      "justification": "Correo legítimo"
+    }
+  ],
+  "executed_actions": [],
+  "escalation": {
+    "escalate": false,
+    "to": "",
+    "reason": ""
+  },
+  "open_questions": [],
+  "triage_seconds": 21
+}

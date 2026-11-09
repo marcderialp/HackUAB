@@ -1,0 +1,22 @@
+servicio,criticidad,impacto,activos,responsable
+Tienda online y app,Crítica,Canal online: 35 % de las ventas; 900.000 clientes registrados,"WEB-ECOM01..04, PAY-GW01, SQL-CRM01",Director de E-commerce
+Cobros online (PCI DSS),Crítica,Todos los cobros de la venta online,PAY-GW01,Directora Financiera
+Cobro en tienda (PCI DSS),Crítica,Venta presencial en las ocho tiendas,POS-T*,Director de Tiendas
+CRM y datos de clientes,Crítica,Datos personales de 900.000 clientes (RGPD),"SQL-CRM01, CRM-APP01",Delegado de Protección de Datos
+"ERP: finanzas, compras y stock",Crítica,"Contabilidad, pagos a proveedores y stock",ERP-APP01,Directora Financiera
+Identidad y directorio activo,Crítica,Acceso de toda la plantilla,"DC01..02, IdP en la nube",Responsable de Sistemas
+Gestión de almacén (WMS),Crítica,Preparación y envío de todos los pedidos,WMS01,Jefa de Operaciones
+Clasificación automática de pedidos,Crítica,Clasificador del centro logístico,"PLC-SORT01..03, HMI-SORT01",Jefa de Operaciones
+Asistente de compra con IA «Vela»,Alta,Atención y venta en la web y la app,VELA-APP01,Director de E-commerce
+Integración continua,Alta,"Despliegues de la tienda online, el WMS y Vela","JENKINS-DEV01, CI-RUNNER01",Responsable de Desarrollo
+Repositorio de código,Alta,"Código de la tienda online, el WMS y Vela",GIT01,Responsable de Desarrollo
+Unidades compartidas,Alta,"Ficheros de Finanzas, Compras y Personas",FS01,Responsable de Sistemas
+Copias de seguridad,Alta,Recuperación ante desastres,BACKUP01,Responsable de Sistemas
+Administración privilegiada,Alta,Único punto de administración de servidores,JUMP01,Responsable de Sistemas
+Acceso remoto,Alta,VPN de empleados y proveedores,VPN-GW01,Responsable de Sistemas
+Ingeniería de automatización,Alta,Programación del clasificador,ENG-WS01,Jefa de Operaciones
+Operación de tienda,Media,Gestión diaria de las tiendas,LT-T*,Director de Tiendas
+Gestión de puestos,Media,Inventario y parches de los puestos,SCCM01,Responsable de Sistemas
+Gestión de vulnerabilidades,Media,Escaneos semanales,NESSUS01,Responsable de Ciberseguridad
+Impresión,Baja,Impresoras de las oficinas,PRINT01,Responsable de Sistemas
+Correo electrónico,Alta,Correo de toda la plantilla,"MAILGW01, Correo en la nube",Responsable de Sistemas

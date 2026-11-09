@@ -1,0 +1,21 @@
+[server]
+# Only this laptop can open the console: it has approval buttons and no login.
+address = "localhost"
+
+[browser]
+gatherUsageStats = false
+
+[client]
+# Hides Streamlit's Deploy button and developer menu during the demo.
+toolbarMode = "minimal"
+
+[theme]
+# Same look as the deck: ink background, one teal accent, light type. Visual only.
+base = "dark"
+primaryColor = "#5eead4"
+backgroundColor = "#0a0e14"
+secondaryBackgroundColor = "#121923"
+textColor = "#e9eef4"
+borderColor = "#243040"
+baseRadius = "0.6rem"
+font = "sans-serif"

@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ticket de triaje de nivel 1",
+  "description": "Formato de un ticket de triaje. Reescrito para el conjunto de datos de prueba de este repositorio.",
+  "type": "object",
+  "required": [
+    "ticket_id",
+    "alert_ids",
+    "title",
+    "verdict",
+    "confidence",
+    "severity",
+    "summary",
+    "evidence",
+    "recommended_actions",
+    "escalation"
+  ],
+  "properties": {
+    "ticket_id": {"type": "string"},
+    "alert_ids": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Alertas que cubre el ticket"
+    },
+    "title": {"type": "string", "description": "Qué está pasando, en una línea"},
+    "verdict": {
+      "enum": ["true_positive", "benign_true_positive", "false_positive", "needs_more_info"]
+    },
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "severity": {
+      "enum": ["informational", "low", "medium", "high", "critical"]
+    },
+    "severity_rationale": {"type": "string", "description": "Cálculo de la severidad según la política del SOC"},
+    "affected": {
+      "type": "object",
+      "properties": {
+        "users": {"type": "array"},
+        "hosts": {"type": "array"},
+        "business_services": {"type": "array"},
+        "customers": {"type": "array"}
+      }
+    },
+    "summary": {"type": "string", "description": "Lo ocurrido, en pocas frases, para el nivel 2"},
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source": {"type": "string"},
+          "event_id": {"type": "string"},
+          "finding": {"type": "string"}
+        }
+      }
+    },
+    "enrichment": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "indicator": {"type": "string"},
+          "type": {"type": "string"},
+          "source": {"type": "string"},
+          "result": {"type": "string"}
+        }
+      }
+    },
+    "mitre": {"type": "array", "items": {"type": "string"}},
+    "recommended_actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["action", "target", "requires_approval"],
+        "properties": {
+          "action": {"type": "string"},
+          "target": {"type": "string"},
+          "requires_approval": {"type": "boolean"},
+          "justification": {"type": "string"}
+        }
+      }
+    },
+    "executed_actions": {
+      "type": "array",
+      "items": {"type": "object"},
+      "description": "Acciones ejecutadas contra la API del SOC, siempre con una aprobación registrada"
+    },
+    "escalation": {
+      "type": "object",
+      "required": ["escalate"],
+      "properties": {
+        "escalate": {"type": "boolean"},
+        "to": {"type": "string"},
+        "reason": {"type": "string"}
+      }
+    },
+    "open_questions": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Lo que queda por resolver y debería mirar una persona"
+    },
+    "triage_seconds": {"type": "number"}
+  }
+}

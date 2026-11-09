@@ -1,0 +1,10 @@
+id,titulo,inicio,fin,solicitante,detalle,alcance
+CHG-2026-2101,Pentest anual de la tienda online,2026-10-13 09:00,2026-10-15 19:00,Auditora externa (AuditSec Labs),IPs origen 192.0.2.50-52; alcance www.tarvia.example y la API; sin DoS,WEB-ECOM01..04
+CHG-2026-2102,Escaneo semanal de vulnerabilidades,2026-10-14 03:00,2026-10-14 05:00,Ciberseguridad,Origen NESSUS01 (svc_scanner); se repite cada miércoles,Todas las redes salvo OT
+CHG-2026-2103,Inventario diario de software con SCCM,2026-09-01 00:00,2026-12-31 23:59,Puesto de trabajo (IT),Script de inventario lanzado por CcmExec con la cuenta svc_sccm; PowerShell codificado (-EncodedCommand) cada día 10:00-12:00,Todos los puestos
+CHG-2026-2104,Mantenimiento del clasificador de pedidos,2026-10-16 08:00,2026-10-16 14:00,Operaciones Martorell,Actualización de firmware de los PLC desde ENG-WS01 (Modbus y EtherNet/IP),PLC-SORT01..03
+CHG-2026-2105,PsExec para desplegar el nuevo agente de copias,2026-10-12 08:00,2026-10-23 18:00,Sistemas,PsExec desde JUMP01 con cuenta adm.* hacia los servidores,Servidores Windows
+CHG-2026-2106,Ampliación de horario de Logisoft por el inventario (VPN),2026-10-13 18:00,2026-10-13 21:00,Operaciones Martorell,Acceso VPN de ext.logisoft desde su IP corporativa fuera de la ventana contractual,WMS01
+CHG-2026-2107,Alta de svc_backup en Backup Operators (migración de copias),2026-10-15 10:00,2026-10-15 12:00,Sistemas,Alta en Backup Operators con cuenta adm.* desde JUMP01,Directorio activo
+CHG-2026-2108,Web de campaña en un bucket público,2026-10-12 16:00,2026-10-12 16:30,Marketing digital,Bucket tarvia-campaign-assets con lectura pública; despliegue con Terraform desde el pipeline ecom-frontend,AWS tarvia-prod
+CHG-2026-2109,Envío semanal de nóminas a la gestoría,2026-10-01 00:00,2026-12-31 23:59,Personas,Destino nominas@gestoria-asesores.example; adjunto cifrado,Correo

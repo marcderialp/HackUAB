@@ -1,0 +1,88 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Triaje N1 con IA para el SOC de Tarvia</title>
+<style>
+@page { size:A4; margin:11mm 12mm; }
+body { font-family:-apple-system,"Helvetica Neue",Arial,sans-serif; font-size:9.3pt; line-height:1.38; color:#1a1a1a; margin:0; }
+h1 { font-size:16pt; margin:0; color:#1f4e79; } .sub { color:#555; margin:1px 0 7px; font-size:9pt; }
+h2 { font-size:10.4pt; color:#1f4e79; border-bottom:1.5px solid #1f4e79; margin:8px 0 4px; padding-bottom:1px; }
+.cols { display:flex; gap:12px; } .col { flex:1; }
+table { border-collapse:collapse; width:100%; font-size:8.6pt; margin:2px 0 4px; }
+th,td { border:1px solid #c7ced6; padding:2px 5px; text-align:left; vertical-align:top; } th { background:#e8eef5; }
+ul { margin:2px 0 4px 15px; padding:0; } li { margin:1px 0; }
+.kpis { display:flex; gap:8px; margin:5px 0 3px; }
+.kpi { flex:1; background:#eef3f9; border-left:4px solid #1f4e79; padding:4px 7px; }
+.kpi b { display:block; font-size:14pt; color:#1f4e79; } .kpi span { font-size:8pt; color:#444; }
+.ask { background:#fdf6e9; border-left:4px solid #d68910; padding:4px 8px; margin-top:5px; }
+.pend { background:#fff3c4; padding:0 3px; border-radius:2px; }
+.foot { font-size:7.8pt; color:#666; margin-top:5px; }
+</style></head><body>
+<h1>Triaje de nivel 1 asistido por IA para el SOC de Tarvia</h1>
+<div class="sub">Propuesta al Comité de Dirección · Equipo Prompt &amp; Pray · noviembre de 2026</div>
+
+<div class="kpis">
+<div class="kpi"><b>11.061</b><span>alertas del SIEM en 4 semanas</span></div>
+<div class="kpi"><b>32 %</b><span>llegan fuera del horario del SOC (8–20 h, L–V), sin nadie mirando</span></div>
+<div class="kpi"><b>96 %</b><span>vienen de solo 9 reglas, casi todas ruido repetido</span></div>
+<div class="kpi"><b>~19 s</b><span>por alerta con IA; el SLA de una alerta crítica es de 15 min</span></div>
+</div>
+
+<div class="cols"><div class="col">
+<h2>El problema</h2>
+<ul>
+<li>Seis analistas, de 8 a 20 h entre semana. Una alerta crítica a las 3 de la madrugada espera hasta el lunes, o hasta que la guardia N2 se entere.</li>
+<li>El volumen lo dominan unas pocas reglas ruidosas: el equipo se pasa el día cerrando lo mismo y lo importante se pierde.</li>
+<li>Lo que más importa proteger: la venta online, los datos de los clientes, los pagos y la logística.</li>
+</ul>
+
+<h2>Qué hace el sistema, alerta por alerta</h2>
+<ul>
+<li><b>Reúne las pruebas</b> que pide el runbook de cada regla: logs ±24 h, inventario, cambios aprobados, RR. HH., inteligencia, otras alertas.</li>
+<li><b>La IA las juzga</b>: veredicto, resumen para N2 y las pruebas citadas por su identificador. Si no puede decidir, lo dice y pasa a una persona.</li>
+<li><b>El código aplica la política del SOC</b>: severidad con la matriz, SLA, escalado obligatorio y quién aprueba cada acción.</li>
+<li><b>Una persona decide</b> en una consola web: ve qué se consultó, por qué y qué tiene que aprobar.</li>
+<li>Agrupa las 11.061 alertas en <b>215 decisiones de la IA</b>: el ruido repetido se juzga una vez y se copia a sus iguales tras comprobar cada uno.</li>
+</ul>
+</div><div class="col">
+<h2>Quién decide qué</h2>
+<table>
+<tr><th>Decisión</th><th>IA</th><th>Persona / código</th></tr>
+<tr><td>Recoger y cruzar pruebas</td><td>sí (solo lectura)</td><td>—</td></tr>
+<tr><td>Veredicto y resumen</td><td>propone, citando pruebas</td><td>el analista acepta o corrige</td></tr>
+<tr><td>Severidad, SLA, escalado</td><td>aporta hechos</td><td>la política (código)</td></tr>
+<tr><td>Contención (bloquear, aislar…)</td><td>solo propone</td><td>una persona, con un clic</td></tr>
+<tr><td>Red OT (clasificador de Martorell)</td><td>nunca actúa</td><td>Operaciones</td></tr>
+</table>
+
+<h2>Resultados medidos</h2>
+<ul>
+<li><b>Fiabilidad</b>: las 11.061 alertas cubiertas con 245 tickets válidos y 0 errores; las 215 decisiones de la IA en ~9 minutos (8 en paralelo).</li>
+<li><b>Acierto</b> sobre 12 alertas etiquetadas que nadie usó para ajustar: <b>83 % de veredictos (10 de 12)</b>, <b>ningún ataque no detectado y ningún escalado perdido</b>. Sobre las 61 usadas para ajustar (cifra optimista): 95 % de veredictos, 0 ataques no detectados y 0 de 36 escalados perdidos.</li>
+<li><b>Manipulación</b>: correos con instrucciones ocultas para el «sistema automático» se detectan y no se obedecen.</li>
+<li><b>Criterio</b>: distingue un ataque, una actividad autorizada (pentest, escáner, mantenimiento con cambio aprobado) y una falsa alarma rutinaria.</li>
+</ul>
+
+<h2>Lo que gana Tarvia</h2>
+<ul>
+<li>Triaje 24/7 dentro del SLA; las noches y los fines de semana dejan de ser un punto ciego.</li>
+<li>Ajuste de reglas con datos: <b>un solo patrón rutinario (inventario de software) genera 1.349 alertas (12 %)</b>; excluirlo las elimina en origen.</li>
+<li>Cada decisión queda documentada y es auditable (pruebas, consultas, cálculo de severidad).</li>
+</ul>
+</div></div>
+
+<div class="cols"><div class="col">
+<h2>Riesgos y cómo se controlan</h2>
+<ul>
+<li><b>La IA se equivoca</b>: nunca ejecuta nada; si falla o duda, la alerta pasa a una persona y, si es grave, se escala.</li>
+<li><b>Un atacante intenta engañarla</b>: el texto del atacante se aísla como dato y no se obedece.</li>
+<li><b>Exceso de confianza</b>: medimos con alertas que no se usaron para ajustar; las limitaciones están documentadas.</li>
+</ul>
+</div><div class="col">
+<div class="ask"><b>Qué pedimos al Comité</b>
+<ul>
+<li>Un <b>piloto de 4 semanas en modo sombra</b>: la IA tría, el equipo compara, nada se automatiza.</li>
+<li>Aprobar las <b>exclusiones de reglas</b> que proponga el piloto (empezando por el inventario rutinario).</li>
+<li>Que la <b>guardia N2</b> reciba de noche los escalados críticos del sistema.</li>
+<li>Una revisión de resultados al final del piloto antes de ampliar el alcance.</li>
+</ul></div>
+</div></div>
+<div class="foot">Datos sintéticos del reto (octubre de 2026). Modelo de lenguaje en la pasarela de la UAB, sin coste para Tarvia. Detalle técnico y limitaciones: README y docs/limitations.md del proyecto.</div>
+</body></html>

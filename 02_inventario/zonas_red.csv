@@ -1,0 +1,11 @@
+zona,cidr,ubicacion,descripcion
+HQ-USERS,10.10.0.0/16,Barcelona HQ,Puestos de usuario de las oficinas centrales
+MAD-USERS,10.11.0.0/16,Madrid Oficina,Puestos de Atención al Cliente
+DC-SERVERS,10.20.0.0/16,CPD Barcelona,Servidores corporativos
+STORES,10.30.0.0/16,Tiendas,Tiendas: TPV y portátil de la responsable (10.30.<n>.0/24)
+LOGISTICS-IT,10.40.0.0/20,Martorell CL,IT del centro logístico
+LOGISTICS-OT,10.40.16.0/20,Martorell CL,OT: PLC del clasificador y HMI. Solo desde ENG-WS01 y WMS01
+DMZ,10.50.0.0/16,CPD Barcelona,"Frontales de la tienda online, pasarela de pagos y asistente Vela"
+DEV,10.60.0.0/16,CPD Barcelona,Desarrollo: Jenkins y Git
+VPN-POOL,10.99.0.0/16,Remoto,Usuarios conectados por VPN
+AWS-PROD,172.16.0.0/16,AWS eu-west-1,Cuenta tarvia-prod

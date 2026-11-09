@@ -1,0 +1,531 @@
+ip,country,city,asn,as_org,is_tor,is_vpn_provider,is_hosting,is_residential_proxy
+198.19.10.1,ES,Barcelona,AS64600,FibraNorte Empresas,False,False,False,False
+198.19.10.2,ES,Madrid,AS64600,FibraNorte Empresas,False,False,False,False
+198.19.10.3,ES,Martorell,AS64600,FibraNorte Empresas,False,False,False,False
+198.19.70.15,ES,Lleida,AS64630,Logisoft Sistemas SL,False,False,False,False
+198.19.80.20,MX,Ciudad de México,AS64640,RedHotel MX,False,False,False,False
+198.19.250.10,IE,,AS64700,CloudCDN Global,False,False,True,False
+198.19.250.11,IE,,AS64700,CloudCDN Global,False,False,True,False
+198.19.250.12,IE,,AS64700,CloudCDN Global,False,False,True,False
+198.19.250.13,IE,,AS64700,CloudCDN Global,False,False,True,False
+198.19.250.14,IE,,AS64700,CloudCDN Global,False,False,True,False
+198.19.250.15,IE,,AS64700,CloudCDN Global,False,False,True,False
+198.19.250.16,IE,,AS64700,CloudCDN Global,False,False,True,False
+198.19.250.17,IE,,AS64700,CloudCDN Global,False,False,True,False
+198.19.250.18,IE,,AS64700,CloudCDN Global,False,False,True,False
+198.19.250.19,IE,,AS64700,CloudCDN Global,False,False,True,False
+198.19.250.20,IE,,AS64700,CloudCDN Global,False,False,True,False
+198.19.250.21,IE,,AS64700,CloudCDN Global,False,False,True,False
+198.19.250.22,IE,,AS64700,CloudCDN Global,False,False,True,False
+198.19.250.23,IE,,AS64700,CloudCDN Global,False,False,True,False
+198.19.250.24,IE,,AS64700,CloudCDN Global,False,False,True,False
+198.19.90.12,ES,,AS64660,Correo Empresas SL,False,False,False,False
+198.19.90.10,ES,,AS64660,Correo Empresas SL,False,False,False,False
+198.19.90.11,ES,,AS64660,Correo Empresas SL,False,False,False,False
+203.0.113.45,NL,Ámsterdam,AS64501,NimbusHost BV,False,False,True,False
+203.0.113.33,US,Ashburn,AS64507,SwiftCloud LLC,False,False,True,False
+198.51.100.45,US,San José,AS64508,PersonalDrive Inc,False,False,True,False
+203.0.113.77,NL,Ámsterdam,AS64501,NimbusHost BV,False,False,True,False
+198.19.251.10,IE,,AS64700,CloudCDN Global,False,False,True,False
+198.19.90.13,ES,,AS64660,Correo Empresas SL,False,False,False,False
+198.19.90.14,ES,,AS64660,Correo Empresas SL,False,False,False,False
+198.19.90.15,ES,,AS64660,Correo Empresas SL,False,False,False,False
+198.19.90.16,ES,,AS64660,Correo Empresas SL,False,False,False,False
+198.19.70.16,ES,,AS64660,Correo Empresas SL,False,False,False,False
+203.0.113.25,NL,Ámsterdam,AS64500,BulkMail Hosting BV,False,False,True,False
+203.0.113.30,US,Ashburn,AS64507,SwiftCloud LLC,False,False,True,False
+203.0.113.31,US,Ashburn,AS64507,SwiftCloud LLC,False,False,True,False
+198.51.100.200,US,Dallas,AS64502,QuickVPS LLC,False,False,True,False
+198.51.100.77,RO,Bucarest,AS64503,CloudForge SRL,False,False,True,False
+198.51.100.78,RO,Bucarest,AS64503,CloudForge SRL,False,False,True,False
+203.0.113.160,EE,Tallin,AS64504,VPSRack OÜ,False,False,True,False
+203.0.113.190,IN,Bombay,AS64505,Mumbai Fibernet,False,False,False,False
+192.0.2.50,ES,Madrid,AS64506,AuditSec Labs,False,False,False,False
+192.0.2.51,ES,Madrid,AS64506,AuditSec Labs,False,False,False,False
+192.0.2.52,ES,Madrid,AS64506,AuditSec Labs,False,False,False,False
+198.19.30.10,ES,Barcelona,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.30.11,ES,Barcelona,AS64612,Ona Telecom,False,False,False,False
+198.19.30.12,ES,Barcelona,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.30.13,ES,Barcelona,AS64612,Ona Telecom,False,False,False,False
+198.19.30.14,ES,Barcelona,AS64612,Ona Telecom,False,False,False,False
+198.19.30.15,ES,Barcelona,AS64612,Ona Telecom,False,False,False,False
+198.19.30.16,ES,Barcelona,AS64611,Conecta Hogar,False,False,False,False
+198.19.30.17,ES,Barcelona,AS64612,Ona Telecom,False,False,False,False
+198.19.30.18,ES,Barcelona,AS64611,Conecta Hogar,False,False,False,False
+198.19.30.19,ES,Barcelona,AS64612,Ona Telecom,False,False,False,False
+198.19.30.20,ES,Barcelona,AS64612,Ona Telecom,False,False,False,False
+198.19.30.21,ES,Barcelona,AS64612,Ona Telecom,False,False,False,False
+198.19.30.22,ES,Barcelona,AS64612,Ona Telecom,False,False,False,False
+198.19.30.23,ES,Barcelona,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.30.24,ES,Barcelona,AS64612,Ona Telecom,False,False,False,False
+198.19.30.25,ES,Barcelona,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.30.26,ES,Barcelona,AS64611,Conecta Hogar,False,False,False,False
+198.19.30.27,ES,Barcelona,AS64611,Conecta Hogar,False,False,False,False
+198.19.30.28,ES,Barcelona,AS64611,Conecta Hogar,False,False,False,False
+198.19.30.29,ES,Barcelona,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.30.30,ES,Barcelona,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.30.31,ES,Barcelona,AS64611,Conecta Hogar,False,False,False,False
+198.19.30.32,ES,Barcelona,AS64612,Ona Telecom,False,False,False,False
+198.19.30.33,ES,Barcelona,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.30.34,ES,Barcelona,AS64612,Ona Telecom,False,False,False,False
+198.19.30.35,ES,Barcelona,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.30.36,ES,Barcelona,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.30.37,ES,Madrid,AS64612,Ona Telecom,False,False,False,False
+198.19.30.38,ES,Madrid,AS64612,Ona Telecom,False,False,False,False
+198.19.30.39,ES,Madrid,AS64611,Conecta Hogar,False,False,False,False
+198.19.30.40,ES,Madrid,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.30.41,ES,Madrid,AS64612,Ona Telecom,False,False,False,False
+198.19.30.42,ES,Madrid,AS64611,Conecta Hogar,False,False,False,False
+198.19.30.43,ES,Martorell,AS64611,Conecta Hogar,False,False,False,False
+198.19.30.44,ES,Martorell,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.30.45,ES,Martorell,AS64611,Conecta Hogar,False,False,False,False
+198.19.30.46,ES,Martorell,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.11.1,ES,Barcelona,AS64600,FibraNorte Empresas,False,False,False,False
+198.19.30.47,ES,Barcelona,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.11.2,ES,Barcelona,AS64600,FibraNorte Empresas,False,False,False,False
+198.19.30.48,ES,Barcelona,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.11.3,ES,Terrassa,AS64600,FibraNorte Empresas,False,False,False,False
+198.19.30.49,ES,Terrassa,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.11.5,ES,Reus,AS64600,FibraNorte Empresas,False,False,False,False
+198.19.30.50,ES,Reus,AS64612,Ona Telecom,False,False,False,False
+198.19.11.8,ES,Madrid,AS64600,FibraNorte Empresas,False,False,False,False
+198.19.30.51,ES,Madrid,AS64612,Ona Telecom,False,False,False,False
+198.19.100.20,ES,Girona,AS64612,Ona Telecom,False,False,False,False
+198.19.100.21,ES,Valencia,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.22,ES,Girona,AS64612,Ona Telecom,False,False,False,False
+198.19.100.23,ES,Valencia,AS64612,Ona Telecom,False,False,False,False
+198.19.100.24,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.100.25,ES,Madrid,AS64612,Ona Telecom,False,False,False,False
+198.19.100.26,ES,Valencia,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.27,ES,Zaragoza,AS64612,Ona Telecom,False,False,False,False
+198.19.100.28,ES,Girona,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.29,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.100.30,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.100.31,PT,Lisboa,AS64650,Lusonet,False,False,False,False
+198.19.100.32,ES,Zaragoza,AS64612,Ona Telecom,False,False,False,False
+198.19.100.33,ES,Zaragoza,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.34,ES,Sevilla,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.35,ES,Valencia,AS64612,Ona Telecom,False,False,False,False
+198.19.100.36,ES,Madrid,AS64612,Ona Telecom,False,False,False,False
+198.19.100.37,ES,Zaragoza,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.38,ES,Sevilla,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.39,ES,Barcelona,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.40,ES,Madrid,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.41,ES,Madrid,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.42,PT,Lisboa,AS64650,Lusonet,False,False,False,False
+198.19.100.43,ES,Sevilla,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.44,PT,Lisboa,AS64650,Lusonet,False,False,False,False
+198.19.100.45,ES,Barcelona,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.46,ES,Madrid,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.47,ES,Valencia,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.48,ES,Valencia,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.49,ES,Madrid,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.50,ES,Valencia,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.51,ES,Girona,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.52,ES,Sevilla,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.53,PT,Lisboa,AS64650,Lusonet,False,False,False,False
+198.19.100.54,PT,Lisboa,AS64650,Lusonet,False,False,False,False
+198.19.100.55,ES,Madrid,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.56,ES,Girona,AS64612,Ona Telecom,False,False,False,False
+198.19.100.57,ES,Barcelona,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.58,PT,Lisboa,AS64650,Lusonet,False,False,False,False
+198.19.100.59,ES,Valencia,AS64612,Ona Telecom,False,False,False,False
+198.19.100.60,ES,Madrid,AS64612,Ona Telecom,False,False,False,False
+198.19.100.61,ES,Valencia,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.62,PT,Lisboa,AS64650,Lusonet,False,False,False,False
+198.19.100.63,ES,Barcelona,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.64,ES,Girona,AS64612,Ona Telecom,False,False,False,False
+198.19.100.65,ES,Sevilla,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.66,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.100.67,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.100.68,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.100.69,ES,Valencia,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.70,ES,Valencia,AS64612,Ona Telecom,False,False,False,False
+198.19.100.71,ES,Zaragoza,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.72,ES,Tarragona,AS64612,Ona Telecom,False,False,False,False
+198.19.100.73,ES,Girona,AS64612,Ona Telecom,False,False,False,False
+198.19.100.74,ES,Valencia,AS64612,Ona Telecom,False,False,False,False
+198.19.100.75,ES,Lleida,AS64612,Ona Telecom,False,False,False,False
+198.19.100.76,ES,Barcelona,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.77,PT,Lisboa,AS64650,Lusonet,False,False,False,False
+198.19.100.78,PT,Lisboa,AS64650,Lusonet,False,False,False,False
+198.19.100.79,ES,Barcelona,AS64612,Ona Telecom,False,False,False,False
+198.19.100.80,ES,Zaragoza,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.81,ES,Valencia,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.82,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.100.83,ES,Barcelona,AS64612,Ona Telecom,False,False,False,False
+198.19.100.84,ES,Tarragona,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.85,ES,Zaragoza,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.86,ES,Zaragoza,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.87,ES,Sevilla,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.88,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.100.89,ES,Valencia,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.90,ES,Sevilla,AS64612,Ona Telecom,False,False,False,False
+198.19.100.91,ES,Madrid,AS64612,Ona Telecom,False,False,False,False
+198.19.100.92,ES,Sevilla,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.93,ES,Madrid,AS64612,Ona Telecom,False,False,False,False
+198.19.100.94,PT,Lisboa,AS64650,Lusonet,False,False,False,False
+198.19.100.95,ES,Girona,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.96,ES,Madrid,AS64612,Ona Telecom,False,False,False,False
+198.19.100.97,ES,Barcelona,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.98,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.100.99,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.100.100,ES,Girona,AS64612,Ona Telecom,False,False,False,False
+198.19.100.101,ES,Zaragoza,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.102,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.100.103,ES,Lleida,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.104,ES,Valencia,AS64612,Ona Telecom,False,False,False,False
+198.19.100.105,ES,Lleida,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.106,ES,Madrid,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.107,ES,Sevilla,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.108,ES,Barcelona,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.109,ES,Valencia,AS64612,Ona Telecom,False,False,False,False
+198.19.100.110,ES,Girona,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.111,ES,Girona,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.112,ES,Lleida,AS64612,Ona Telecom,False,False,False,False
+198.19.100.113,ES,Girona,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.114,ES,Barcelona,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.115,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.100.116,ES,Zaragoza,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.117,ES,Barcelona,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.118,PT,Lisboa,AS64650,Lusonet,False,False,False,False
+198.19.100.119,ES,Barcelona,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.120,ES,Lleida,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.121,ES,Zaragoza,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.122,ES,Barcelona,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.123,PT,Lisboa,AS64650,Lusonet,False,False,False,False
+198.19.100.124,ES,Zaragoza,AS64612,Ona Telecom,False,False,False,False
+198.19.100.125,ES,Madrid,AS64612,Ona Telecom,False,False,False,False
+198.19.100.126,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.100.127,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.100.128,PT,Lisboa,AS64650,Lusonet,False,False,False,False
+198.19.100.129,PT,Lisboa,AS64650,Lusonet,False,False,False,False
+198.19.100.130,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.100.131,ES,Valencia,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.132,ES,Sevilla,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.133,ES,Valencia,AS64612,Ona Telecom,False,False,False,False
+198.19.100.134,PT,Lisboa,AS64650,Lusonet,False,False,False,False
+198.19.100.135,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.100.136,ES,Barcelona,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.137,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.100.138,ES,Barcelona,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.139,ES,Zaragoza,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.140,ES,Zaragoza,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.141,ES,Tarragona,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.142,PT,Lisboa,AS64650,Lusonet,False,False,False,False
+198.19.100.143,ES,Sevilla,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.144,ES,Tarragona,AS64612,Ona Telecom,False,False,False,False
+198.19.100.145,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.100.146,ES,Valencia,AS64612,Ona Telecom,False,False,False,False
+198.19.100.147,ES,Tarragona,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.148,ES,Tarragona,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.149,ES,Sevilla,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.150,ES,Barcelona,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.151,ES,Barcelona,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.152,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.100.153,ES,Girona,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.154,ES,Lleida,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.155,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.100.156,ES,Lleida,AS64612,Ona Telecom,False,False,False,False
+198.19.100.157,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.100.158,ES,Barcelona,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.159,ES,Madrid,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.160,ES,Barcelona,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.161,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.100.162,ES,Madrid,AS64612,Ona Telecom,False,False,False,False
+198.19.100.163,ES,Barcelona,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.164,ES,Barcelona,AS64612,Ona Telecom,False,False,False,False
+198.19.100.165,ES,Tarragona,AS64612,Ona Telecom,False,False,False,False
+198.19.100.166,ES,Tarragona,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.167,PT,Lisboa,AS64650,Lusonet,False,False,False,False
+198.19.100.168,ES,Madrid,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.169,ES,Tarragona,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.170,ES,Sevilla,AS64612,Ona Telecom,False,False,False,False
+198.19.100.171,ES,Valencia,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.172,ES,Madrid,AS64612,Ona Telecom,False,False,False,False
+198.19.100.173,ES,Valencia,AS64612,Ona Telecom,False,False,False,False
+198.19.100.174,ES,Girona,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.175,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.100.176,ES,Girona,AS64612,Ona Telecom,False,False,False,False
+198.19.100.177,ES,Madrid,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.178,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.100.179,ES,Tarragona,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.180,ES,Valencia,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.181,ES,Zaragoza,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.182,ES,Sevilla,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.183,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.100.184,ES,Madrid,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.185,ES,Sevilla,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.186,ES,Tarragona,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.187,ES,Zaragoza,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.188,ES,Barcelona,AS64612,Ona Telecom,False,False,False,False
+198.19.100.189,ES,Valencia,AS64612,Ona Telecom,False,False,False,False
+198.19.100.190,ES,Valencia,AS64612,Ona Telecom,False,False,False,False
+198.19.100.191,ES,Lleida,AS64612,Ona Telecom,False,False,False,False
+198.19.100.192,ES,Girona,AS64612,Ona Telecom,False,False,False,False
+198.19.100.193,ES,Barcelona,AS64612,Ona Telecom,False,False,False,False
+198.19.100.194,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.100.195,ES,Valencia,AS64612,Ona Telecom,False,False,False,False
+198.19.100.196,ES,Madrid,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.197,ES,Sevilla,AS64612,Ona Telecom,False,False,False,False
+198.19.100.198,ES,Sevilla,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.199,PT,Lisboa,AS64650,Lusonet,False,False,False,False
+198.19.100.200,ES,Girona,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.201,ES,Zaragoza,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.202,ES,Madrid,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.203,ES,Madrid,AS64612,Ona Telecom,False,False,False,False
+198.19.100.204,ES,Madrid,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.205,ES,Valencia,AS64612,Ona Telecom,False,False,False,False
+198.19.100.206,ES,Barcelona,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.207,ES,Barcelona,AS64612,Ona Telecom,False,False,False,False
+198.19.100.208,PT,Lisboa,AS64650,Lusonet,False,False,False,False
+198.19.100.209,ES,Lleida,AS64612,Ona Telecom,False,False,False,False
+198.19.100.210,ES,Sevilla,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.211,ES,Lleida,AS64612,Ona Telecom,False,False,False,False
+198.19.100.212,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.100.213,ES,Lleida,AS64612,Ona Telecom,False,False,False,False
+198.19.100.214,ES,Barcelona,AS64611,Conecta Hogar,False,False,False,False
+198.19.100.215,ES,Sevilla,AS64612,Ona Telecom,False,False,False,False
+198.19.100.216,ES,Valencia,AS64612,Ona Telecom,False,False,False,False
+198.19.100.217,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.100.218,ES,Tarragona,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.100.219,ES,Barcelona,AS64612,Ona Telecom,False,False,False,False
+198.19.101.20,ES,Madrid,AS64612,Ona Telecom,False,False,False,False
+198.19.101.21,PT,Lisboa,AS64650,Lusonet,False,False,False,False
+198.19.101.22,ES,Zaragoza,AS64611,Conecta Hogar,False,False,False,False
+198.19.101.23,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.101.24,ES,Barcelona,AS64612,Ona Telecom,False,False,False,False
+198.19.101.25,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.101.26,ES,Lleida,AS64612,Ona Telecom,False,False,False,False
+198.19.101.27,ES,Tarragona,AS64611,Conecta Hogar,False,False,False,False
+198.19.101.28,ES,Zaragoza,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.101.29,ES,Zaragoza,AS64612,Ona Telecom,False,False,False,False
+198.19.101.30,ES,Madrid,AS64612,Ona Telecom,False,False,False,False
+198.19.101.31,ES,Tarragona,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.101.32,ES,Valencia,AS64611,Conecta Hogar,False,False,False,False
+198.19.101.33,ES,Girona,AS64611,Conecta Hogar,False,False,False,False
+198.19.101.34,ES,Madrid,AS64612,Ona Telecom,False,False,False,False
+198.19.101.35,ES,Lleida,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.101.36,ES,Sevilla,AS64612,Ona Telecom,False,False,False,False
+198.19.101.37,ES,Sevilla,AS64611,Conecta Hogar,False,False,False,False
+198.19.101.38,ES,Madrid,AS64611,Conecta Hogar,False,False,False,False
+198.19.101.39,ES,Zaragoza,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.101.40,PT,Lisboa,AS64650,Lusonet,False,False,False,False
+198.19.101.41,ES,Girona,AS64612,Ona Telecom,False,False,False,False
+198.19.101.42,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.101.43,PT,Lisboa,AS64650,Lusonet,False,False,False,False
+198.19.101.44,ES,Barcelona,AS64611,Conecta Hogar,False,False,False,False
+198.19.101.45,ES,Girona,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.101.46,ES,Madrid,AS64612,Ona Telecom,False,False,False,False
+198.19.101.47,ES,Sevilla,AS64611,Conecta Hogar,False,False,False,False
+198.19.101.48,ES,Valencia,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.101.49,ES,Lleida,AS64611,Conecta Hogar,False,False,False,False
+198.19.101.50,ES,Tarragona,AS64611,Conecta Hogar,False,False,False,False
+198.19.101.51,ES,Valencia,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.101.52,ES,Barcelona,AS64611,Conecta Hogar,False,False,False,False
+198.19.101.53,ES,Barcelona,AS64612,Ona Telecom,False,False,False,False
+198.19.101.54,ES,Girona,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.101.55,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.101.56,ES,Madrid,AS64612,Ona Telecom,False,False,False,False
+198.19.101.57,ES,Zaragoza,AS64612,Ona Telecom,False,False,False,False
+198.19.101.58,ES,Sevilla,AS64611,Conecta Hogar,False,False,False,False
+198.19.101.59,ES,Madrid,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.101.60,ES,Tarragona,AS64612,Ona Telecom,False,False,False,False
+198.19.101.61,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.101.62,ES,Barcelona,AS64611,Conecta Hogar,False,False,False,False
+198.19.101.63,ES,Sevilla,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.101.64,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.101.65,ES,Zaragoza,AS64612,Ona Telecom,False,False,False,False
+198.19.101.66,ES,Sevilla,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.101.67,ES,Madrid,AS64612,Ona Telecom,False,False,False,False
+198.19.101.68,ES,Tarragona,AS64612,Ona Telecom,False,False,False,False
+198.19.101.69,PT,Lisboa,AS64650,Lusonet,False,False,False,False
+198.19.101.70,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.101.71,ES,Lleida,AS64611,Conecta Hogar,False,False,False,False
+198.19.101.72,ES,Valencia,AS64612,Ona Telecom,False,False,False,False
+198.19.101.73,ES,Lleida,AS64611,Conecta Hogar,False,False,False,False
+198.19.101.74,ES,Valencia,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.101.75,ES,Sevilla,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.101.76,PT,Lisboa,AS64650,Lusonet,False,False,False,False
+198.19.101.77,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.101.78,ES,Barcelona,AS64612,Ona Telecom,False,False,False,False
+198.19.101.79,ES,Sevilla,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.101.80,ES,Girona,AS64612,Ona Telecom,False,False,False,False
+198.19.101.81,ES,Sevilla,AS64612,Ona Telecom,False,False,False,False
+198.19.101.82,ES,Barcelona,AS64611,Conecta Hogar,False,False,False,False
+198.19.101.83,ES,Madrid,AS64611,Conecta Hogar,False,False,False,False
+198.19.101.84,ES,Madrid,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.101.85,ES,Sevilla,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.101.86,ES,Madrid,AS64612,Ona Telecom,False,False,False,False
+198.19.101.87,PT,Lisboa,AS64650,Lusonet,False,False,False,False
+198.19.101.88,ES,Madrid,AS64611,Conecta Hogar,False,False,False,False
+198.19.101.89,ES,Valencia,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.101.90,ES,Sevilla,AS64612,Ona Telecom,False,False,False,False
+198.19.101.91,ES,Tarragona,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.101.92,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.101.93,ES,Valencia,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.101.94,ES,Valencia,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.101.95,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.101.96,ES,Girona,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.101.97,ES,Girona,AS64612,Ona Telecom,False,False,False,False
+198.19.101.98,ES,Girona,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.101.99,ES,Valencia,AS64612,Ona Telecom,False,False,False,False
+198.19.101.100,ES,Valencia,AS64611,Conecta Hogar,False,False,False,False
+198.19.101.101,PT,Lisboa,AS64650,Lusonet,False,False,False,False
+198.19.101.102,ES,Barcelona,AS64611,Conecta Hogar,False,False,False,False
+198.19.101.103,ES,Tarragona,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.101.104,PT,Lisboa,AS64650,Lusonet,False,False,False,False
+198.19.101.105,ES,Girona,AS64612,Ona Telecom,False,False,False,False
+198.19.101.106,ES,Madrid,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.101.107,ES,Sevilla,AS64611,Conecta Hogar,False,False,False,False
+198.19.101.108,PT,Lisboa,AS64650,Lusonet,False,False,False,False
+198.19.101.109,ES,Zaragoza,AS64611,Conecta Hogar,False,False,False,False
+198.19.101.110,PT,Lisboa,AS64650,Lusonet,False,False,False,False
+198.19.101.111,ES,Girona,AS64611,Conecta Hogar,False,False,False,False
+198.19.101.112,ES,Zaragoza,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.101.113,PT,Oporto,AS64650,Lusonet,False,False,False,False
+198.19.101.114,ES,Valencia,AS64611,Conecta Hogar,False,False,False,False
+198.19.101.115,ES,Girona,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.101.116,ES,Sevilla,AS64612,Ona Telecom,False,False,False,False
+198.19.101.117,ES,Madrid,AS64610,TeleCasa Fibra,False,False,False,False
+198.19.101.118,ES,Sevilla,AS64611,Conecta Hogar,False,False,False,False
+198.19.101.119,ES,Girona,AS64611,Conecta Hogar,False,False,False,False
+198.51.100.250,US,,AS64509,MassMailer LLC,False,False,True,False
+198.19.40.20,ES,Madrid,AS64620,MovilNet España,False,False,False,False
+198.19.40.21,ES,Madrid,AS64620,MovilNet España,False,False,False,False
+198.19.40.22,ES,Madrid,AS64620,MovilNet España,False,False,False,False
+198.19.40.23,ES,Madrid,AS64620,MovilNet España,False,False,False,False
+198.19.40.24,ES,Madrid,AS64620,MovilNet España,False,False,False,False
+198.19.40.25,ES,Madrid,AS64620,MovilNet España,False,False,False,False
+198.19.40.26,ES,Madrid,AS64620,MovilNet España,False,False,False,False
+198.19.40.27,ES,Madrid,AS64620,MovilNet España,False,False,False,False
+198.19.40.28,ES,Madrid,AS64620,MovilNet España,False,False,False,False
+198.19.40.29,ES,Madrid,AS64620,MovilNet España,False,False,False,False
+198.19.40.30,ES,Madrid,AS64620,MovilNet España,False,False,False,False
+198.19.40.31,ES,Madrid,AS64620,MovilNet España,False,False,False,False
+198.19.40.32,ES,Madrid,AS64620,MovilNet España,False,False,False,False
+198.19.40.33,ES,Madrid,AS64620,MovilNet España,False,False,False,False
+198.19.40.34,ES,Madrid,AS64620,MovilNet España,False,False,False,False
+198.19.40.35,ES,Madrid,AS64620,MovilNet España,False,False,False,False
+198.19.40.36,ES,Madrid,AS64620,MovilNet España,False,False,False,False
+198.19.40.37,ES,Madrid,AS64620,MovilNet España,False,False,False,False
+198.19.40.38,ES,Madrid,AS64620,MovilNet España,False,False,False,False
+198.19.40.39,ES,Madrid,AS64620,MovilNet España,False,False,False,False
+198.19.40.40,ES,Madrid,AS64620,MovilNet España,False,False,False,False
+198.19.40.41,ES,Madrid,AS64620,MovilNet España,False,False,False,False
+198.19.40.42,ES,Madrid,AS64620,MovilNet España,False,False,False,False
+198.19.40.43,ES,Madrid,AS64620,MovilNet España,False,False,False,False
+198.19.40.44,ES,Madrid,AS64620,MovilNet España,False,False,False,False
+198.51.100.10,NL,Ámsterdam,AS64510,Hosting Ámsterdam 0,False,False,True,False
+198.51.100.11,US,Ashburn,AS64511,Hosting Ashburn 1,False,False,True,False
+198.51.100.12,DE,Fráncfort,AS64512,Hosting Fráncfort 2,False,False,True,False
+198.51.100.13,SG,Singapur,AS64513,Hosting Singapur 3,False,False,True,False
+198.51.100.14,BR,São Paulo,AS64514,Hosting São Paulo 4,False,False,True,False
+198.51.100.15,NL,Ámsterdam,AS64515,Hosting Ámsterdam 5,False,False,True,False
+198.51.100.16,US,Ashburn,AS64516,Hosting Ashburn 6,False,False,True,False
+198.51.100.17,DE,Fráncfort,AS64517,Hosting Fráncfort 7,False,False,True,False
+198.51.100.18,SG,Singapur,AS64518,Hosting Singapur 8,False,False,True,False
+198.51.100.19,BR,São Paulo,AS64510,Hosting São Paulo 0,False,False,True,False
+198.51.100.20,NL,Ámsterdam,AS64511,Hosting Ámsterdam 1,False,False,True,False
+198.51.100.21,US,Ashburn,AS64512,Hosting Ashburn 2,False,False,True,False
+198.51.100.22,DE,Fráncfort,AS64513,Hosting Fráncfort 3,False,False,True,False
+198.51.100.23,SG,Singapur,AS64514,Hosting Singapur 4,False,False,True,False
+198.51.100.24,BR,São Paulo,AS64515,Hosting São Paulo 5,False,False,True,False
+198.51.100.25,NL,Ámsterdam,AS64516,Hosting Ámsterdam 6,False,False,True,False
+198.51.100.26,US,Ashburn,AS64517,Hosting Ashburn 7,False,False,True,False
+198.51.100.27,DE,Fráncfort,AS64518,Hosting Fráncfort 8,False,False,True,False
+198.51.100.28,SG,Singapur,AS64510,Hosting Singapur 0,False,False,True,False
+198.51.100.29,BR,São Paulo,AS64511,Hosting São Paulo 1,False,False,True,False
+198.51.100.30,NL,Ámsterdam,AS64512,Hosting Ámsterdam 2,False,False,True,False
+198.51.100.31,US,Ashburn,AS64513,Hosting Ashburn 3,False,False,True,False
+198.51.100.32,DE,Fráncfort,AS64514,Hosting Fráncfort 4,False,False,True,False
+198.51.100.33,SG,Singapur,AS64515,Hosting Singapur 5,False,False,True,False
+198.51.100.34,BR,São Paulo,AS64516,Hosting São Paulo 6,False,False,True,False
+198.51.100.35,NL,Ámsterdam,AS64517,Hosting Ámsterdam 7,False,False,True,False
+198.51.100.36,US,Ashburn,AS64518,Hosting Ashburn 8,False,False,True,False
+198.51.100.37,DE,Fráncfort,AS64510,Hosting Fráncfort 0,False,False,True,False
+198.51.100.38,SG,Singapur,AS64511,Hosting Singapur 1,False,False,True,False
+198.51.100.39,BR,São Paulo,AS64512,Hosting São Paulo 2,False,False,True,False
+203.0.113.130,NL,Ámsterdam,AS64513,Hosting Ámsterdam 3,False,False,True,False
+203.0.113.131,US,Ashburn,AS64514,Hosting Ashburn 4,False,False,True,False
+203.0.113.132,DE,Fráncfort,AS64515,Hosting Fráncfort 5,False,False,True,False
+203.0.113.133,SG,Singapur,AS64516,Hosting Singapur 6,False,False,True,False
+203.0.113.134,BR,São Paulo,AS64517,Hosting São Paulo 7,False,False,True,False
+203.0.113.135,NL,Ámsterdam,AS64518,Hosting Ámsterdam 8,False,False,True,False
+203.0.113.136,US,Ashburn,AS64510,Hosting Ashburn 0,False,False,True,False
+203.0.113.137,DE,Fráncfort,AS64511,Hosting Fráncfort 1,False,False,True,False
+203.0.113.138,SG,Singapur,AS64512,Hosting Singapur 2,False,False,True,False
+203.0.113.139,BR,São Paulo,AS64513,Hosting São Paulo 3,False,False,True,False
+203.0.113.140,NL,Ámsterdam,AS64514,Hosting Ámsterdam 4,False,False,True,False
+203.0.113.141,US,Ashburn,AS64515,Hosting Ashburn 5,False,False,True,False
+203.0.113.142,DE,Fráncfort,AS64516,Hosting Fráncfort 6,False,False,True,False
+203.0.113.143,SG,Singapur,AS64517,Hosting Singapur 7,False,False,True,False
+203.0.113.144,BR,São Paulo,AS64518,Hosting São Paulo 8,False,False,True,False
+203.0.113.145,NL,Ámsterdam,AS64510,Hosting Ámsterdam 0,False,False,True,False
+203.0.113.146,US,Ashburn,AS64511,Hosting Ashburn 1,False,False,True,False
+203.0.113.147,DE,Fráncfort,AS64512,Hosting Fráncfort 2,False,False,True,False
+203.0.113.148,SG,Singapur,AS64513,Hosting Singapur 3,False,False,True,False
+203.0.113.149,BR,São Paulo,AS64514,Hosting São Paulo 4,False,False,True,False
+198.51.100.100,ES,,AS64520,Residential ISP,False,False,False,True
+198.51.100.101,PT,,AS64521,Residential ISP,False,False,False,True
+198.51.100.102,FR,,AS64522,Residential ISP,False,False,False,True
+198.51.100.103,BR,,AS64523,Residential ISP,False,False,False,True
+198.51.100.104,ES,,AS64524,Residential ISP,False,False,False,True
+198.51.100.105,PT,,AS64520,Residential ISP,False,False,False,True
+198.51.100.106,FR,,AS64521,Residential ISP,False,False,False,True
+198.51.100.107,BR,,AS64522,Residential ISP,False,False,False,True
+198.51.100.108,ES,,AS64523,Residential ISP,False,False,False,True
+198.51.100.109,PT,,AS64524,Residential ISP,False,False,False,True
+198.51.100.110,FR,,AS64520,Residential ISP,False,False,False,True
+198.51.100.111,BR,,AS64521,Residential ISP,False,False,False,True
+198.51.100.112,ES,,AS64522,Residential ISP,False,False,False,True
+198.51.100.113,PT,,AS64523,Residential ISP,False,False,False,True
+198.51.100.114,FR,,AS64524,Residential ISP,False,False,False,True
+198.51.100.115,BR,,AS64520,Residential ISP,False,False,False,True
+198.51.100.116,ES,,AS64521,Residential ISP,False,False,False,True
+198.51.100.117,PT,,AS64522,Residential ISP,False,False,False,True
+198.51.100.118,FR,,AS64523,Residential ISP,False,False,False,True
+198.51.100.119,BR,,AS64524,Residential ISP,False,False,False,True
+198.51.100.120,ES,,AS64520,Residential ISP,False,False,False,True
+198.51.100.121,PT,,AS64521,Residential ISP,False,False,False,True
+198.51.100.122,FR,,AS64522,Residential ISP,False,False,False,True
+198.51.100.123,BR,,AS64523,Residential ISP,False,False,False,True
+198.51.100.124,ES,,AS64524,Residential ISP,False,False,False,True
+198.51.100.125,PT,,AS64520,Residential ISP,False,False,False,True
+198.51.100.126,FR,,AS64521,Residential ISP,False,False,False,True
+198.51.100.127,BR,,AS64522,Residential ISP,False,False,False,True
+198.51.100.128,ES,,AS64523,Residential ISP,False,False,False,True
+198.51.100.129,PT,,AS64524,Residential ISP,False,False,False,True
+198.51.100.130,FR,,AS64520,Residential ISP,False,False,False,True
+198.51.100.131,BR,,AS64521,Residential ISP,False,False,False,True
+198.51.100.132,ES,,AS64522,Residential ISP,False,False,False,True
+198.51.100.133,PT,,AS64523,Residential ISP,False,False,False,True
+198.51.100.134,FR,,AS64524,Residential ISP,False,False,False,True
+198.51.100.135,BR,,AS64520,Residential ISP,False,False,False,True
+198.51.100.136,ES,,AS64521,Residential ISP,False,False,False,True
+198.51.100.137,PT,,AS64522,Residential ISP,False,False,False,True
+198.51.100.138,FR,,AS64523,Residential ISP,False,False,False,True
+198.51.100.139,BR,,AS64524,Residential ISP,False,False,False,True
+198.19.46.10,ES,,AS64620,MovilNet España,False,False,False,False
+198.19.46.11,ES,,AS64620,MovilNet España,False,False,False,False
+198.19.46.12,ES,,AS64620,MovilNet España,False,False,False,False
+198.19.46.13,ES,,AS64620,MovilNet España,False,False,False,False
+198.19.46.14,ES,,AS64620,MovilNet España,False,False,False,False
+198.19.46.15,ES,,AS64620,MovilNet España,False,False,False,False
+198.19.46.16,ES,,AS64620,MovilNet España,False,False,False,False
+198.19.46.17,ES,,AS64620,MovilNet España,False,False,False,False
+198.19.46.18,ES,,AS64620,MovilNet España,False,False,False,False
+198.19.46.19,ES,,AS64620,MovilNet España,False,False,False,False
+198.19.46.20,ES,,AS64620,MovilNet España,False,False,False,False
+198.19.46.21,ES,,AS64620,MovilNet España,False,False,False,False
+198.19.46.22,ES,,AS64620,MovilNet España,False,False,False,False
+198.19.46.23,ES,,AS64620,MovilNet España,False,False,False,False
+198.19.46.24,ES,,AS64620,MovilNet España,False,False,False,False
+198.19.46.25,ES,,AS64620,MovilNet España,False,False,False,False
+198.19.46.26,ES,,AS64620,MovilNet España,False,False,False,False
+198.19.46.27,ES,,AS64620,MovilNet España,False,False,False,False
+198.19.46.28,ES,,AS64620,MovilNet España,False,False,False,False
+198.19.46.29,ES,,AS64620,MovilNet España,False,False,False,False
+198.19.46.30,ES,,AS64620,MovilNet España,False,False,False,False
+198.19.46.31,ES,,AS64620,MovilNet España,False,False,False,False
+203.0.113.210,NG,Lagos,AS64511,SkyVPS Ltd,False,False,True,False

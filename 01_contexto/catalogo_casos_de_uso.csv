@@ -1,0 +1,45 @@
+rule_id,nombre,fuente,severidad_base,tactica,tecnica_id,tecnica,runbook,logica
+UC-EML-001,Correo notificado como phishing por un empleado,EMAIL_GW,low,Initial Access,T1566,Phishing,RB-01,Un empleado pulsa «Notificar phishing» en el cliente de correo.
+UC-EML-002,Adjunto con script o macro entregado al buzón,EMAIL_GW,medium,Initial Access,T1566.001,Spearphishing Attachment,RB-01,La pasarela entrega un adjunto con script de un remitente sin historial o con SPF/DMARC fallidos.
+UC-EML-003,Clic en un enlace de phishing,EMAIL_GW,high,Initial Access,T1566.002,Spearphishing Link,RB-01,"Al reescanear una URL ya pulsada, la pasarela la reclasifica como phishing."
+UC-EML-004,Petición de cambio de cuenta bancaria por correo,EMAIL_GW,high,Impact,T1657,Financial Theft,RB-01,"Correo a Finanzas que pide cambiar el IBAN de un proveedor, con importes o urgencia."
+UC-IDP-001,Viaje imposible,IDP,medium,Initial Access,T1078,Valid Accounts,RB-03,Dos inicios de sesión correctos de la misma cuenta a más de 500 km/h.
+UC-IDP-002,Password spraying,IDP,medium,Credential Access,T1110.003,Password Spraying,RB-03,Una misma IP falla la contraseña de 10 o más cuentas en 30 minutos.
+UC-IDP-003,Bombardeo de notificaciones MFA,IDP,high,Credential Access,T1621,Multi-Factor Authentication Request Generation,RB-03,Más de 5 notificaciones push denegadas o sin respuesta en 10 minutos.
+UC-IDP-004,"Inicio de sesión desde hosting, VPN comercial o Tor",IDP,medium,Initial Access,T1078,Valid Accounts,RB-03,"Inicio de sesión correcto desde un ASN de hosting, una VPN comercial o Tor."
+UC-IDP-005,Regla de buzón sospechosa,IDP,high,Collection,T1114.003,Email Forwarding Rule,RB-03,Regla nueva que reenvía fuera de la empresa o marca como leído por palabras clave.
+UC-IDP-006,Token de sesión reutilizado desde otro origen,IDP,high,Credential Access,T1539,Steal Web Session Cookie,RB-03,La misma sesión aparece desde otra IP o con otro agente de usuario.
+UC-IDP-007,Consentimiento OAuth a una aplicación no verificada,IDP,medium,Credential Access,T1528,Steal Application Access Token,RB-03,Un usuario concede permisos de correo o ficheros a una aplicación de un editor no verificado.
+UC-IDP-008,Alta en un grupo privilegiado del directorio activo,AD,high,Privilege Escalation,T1098,Account Manipulation,RB-03,"Miembro nuevo en Domain Admins, Enterprise Admins o Backup Operators."
+UC-EDR-001,Proceso hijo sospechoso de Office o de un intérprete de scripts,EDR,high,Execution,T1204.002,Malicious File,RB-02,"Office, wscript o mshta lanzan una shell, PowerShell o rundll32."
+UC-EDR-002,PowerShell con comando codificado,EDR,medium,Execution,T1059.001,PowerShell,RB-02,powershell.exe con -EncodedCommand o -enc.
+UC-EDR-003,Detección del antivirus,EDR,medium,Execution,T1204,User Execution,RB-02,El antivirus del EDR detecta un fichero malicioso o no deseado.
+UC-EDR-004,Acceso a la memoria de LSASS,EDR,critical,Credential Access,T1003.001,LSASS Memory,RB-02,Un proceso no habitual abre lsass.exe para leer su memoria.
+UC-EDR-005,Herramienta de acceso remoto no aprobada,EDR,medium,Command and Control,T1219,Remote Access Software,RB-02,Se ejecuta una herramienta de acceso remoto distinta de la aprobada por IT.
+UC-EDR-006,Minería de criptomonedas,EDR,medium,Impact,T1496,Resource Hijacking,RB-02,CPU alta sostenida y conexión a un pool de minería.
+UC-EDR-007,Borrado de instantáneas de volumen,EDR,critical,Impact,T1490,Inhibit System Recovery,RB-02,"vssadmin, wmic o wbadmin borran las copias de sombra."
+UC-EDR-008,Ráfaga de comandos de reconocimiento del dominio,EDR,medium,Discovery,T1087.002,Domain Account,RB-02,"Varios comandos net, nltest o whoami en pocos minutos bajo el mismo proceso padre."
+UC-EDR-009,Servidor web que lanza una shell,EDR,critical,Persistence,T1505.003,Web Shell,RB-05,"nginx, php-fpm o w3wp lanzan una shell o un intérprete."
+UC-EDR-010,Lectura de credenciales guardadas en el navegador,EDR,high,Credential Access,T1555.003,Credentials from Web Browsers,RB-02,Un proceso ajeno al navegador lee su almacén de contraseñas.
+UC-EDR-011,Agente EDR detenido o manipulado,EDR,high,Defense Evasion,T1562.001,Disable or Modify Tools,RB-02,"El agente deja de informar, se detiene o se desinstala."
+UC-EDR-012,Lectura de memoria del proceso de cobro del TPV,EDR,critical,Collection,T1005,Data from Local System,RB-02,Un proceso lee de forma repetida la memoria del software de cobro.
+UC-NET-001,Beaconing a un dominio poco frecuente,PROXY,medium,Command and Control,T1071.001,Web Protocols,RB-09,Peticiones a intervalos regulares hacia un dominio que casi nadie visita.
+UC-NET-002,Conexión a una IP en la lista de bloqueo de inteligencia,NGFW,high,Command and Control,T1071,Application Layer Protocol,RB-09,Tráfico hacia una IP marcada como maliciosa en la TIP.
+UC-NET-003,Escaneo de puertos interno,NGFW,medium,Discovery,T1046,Network Service Discovery,RB-09,Un origen interno toca muchos equipos o puertos en poco tiempo.
+UC-NET-004,"Movimiento lateral por SMB, RDP o PsExec",NGFW,high,Lateral Movement,T1021.002,SMB/Windows Admin Shares,RB-09,Ejecución remota o sesión de administración entre equipos internos.
+UC-NET-005,Consulta DNS a un dominio con aspecto DGA,DNS,low,Command and Control,T1568.002,Domain Generation Algorithms,RB-09,Etiqueta DNS larga y de alta entropía.
+UC-NET-006,Posible túnel DNS,DNS,high,Exfiltration,T1048,Exfiltration Over Alternative Protocol,RB-09,Muchas consultas TXT o etiquetas largas hacia el mismo dominio.
+UC-WEB-001,Ataque de inyección contra la web,WAF,low,Initial Access,T1190,Exploit Public-Facing Application,RB-05,"Firma de inyección SQL, XSS, LFI o RCE en el WAF."
+UC-WEB-002,Credential stuffing contra el login de clientes,WAF,medium,Credential Access,T1110.004,Credential Stuffing,RB-05,Pico de fallos de login de clientes repartido entre muchas IP y cuentas.
+UC-WEB-003,Posible toma de control de una cuenta de cliente,ECOM,high,Initial Access,T1078,Valid Accounts,RB-05,Acceso seguido de cambio de email o dirección y un pedido en pocos minutos.
+UC-CLD-001,Credenciales cloud usadas desde un ASN inusual,CLOUD,high,Initial Access,T1078.004,Cloud Accounts,RB-06,Una identidad o clave de AWS se usa desde una red que nunca había usado.
+UC-CLD-002,Creación de una identidad privilegiada en la nube,CLOUD,high,Persistence,T1136.003,Cloud Account,RB-06,CreateUser o CreateAccessKey seguidos de una política de administrador.
+UC-CLD-003,Bucket con acceso público,CLOUD,medium,Collection,T1530,Data from Cloud Storage,RB-06,Una política de bucket concede lectura a cualquiera.
+UC-CLD-004,Descarga masiva desde un bucket crítico,CLOUD,high,Exfiltration,T1530,Data from Cloud Storage,RB-06,Más de 100 GetObject en 10 minutos sobre un bucket confidencial.
+UC-DLP-001,Subida masiva a almacenamiento personal,DLP,medium,Exfiltration,T1567.002,Exfiltration to Cloud Storage,RB-04,Más de 100 MB subidos a un almacenamiento no corporativo.
+UC-DLP-002,Datos personales enviados a un correo externo,DLP,high,Exfiltration,T1048.003,Exfiltration Over Unencrypted Non-C2 Protocol,RB-04,"Adjunto con DNI, IBAN o datos de contacto enviado fuera de la empresa."
+UC-AI-001,Posible prompt injection en el asistente de compra,AI_GATEWAY,low,Initial Access,AML.T0051,LLM Prompt Injection,RB-07,El guardarraíl de Vela marca un mensaje como intento de cambiar sus instrucciones.
+UC-AI-002,Acceso a datos de otro cliente a través del asistente,AI_GATEWAY,high,Collection,AML.T0057,LLM Data Leakage,RB-07,Vela consulta datos de un cliente distinto del autenticado.
+UC-OT-001,Conexión a la red OT desde un origen no autorizado,NGFW,high,Lateral Movement,T0886,Remote Services,RB-08,Tráfico hacia LOGISTICS-OT desde un origen que no es ENG-WS01 ni WMS01.
+UC-DEV-001,Dependencia con script de instalación que lee secretos o sale a la red,CICD,high,Initial Access,T1195.002,Compromise Software Supply Chain,RB-10,Un paquete nuevo ejecuta postinstall y lee variables sensibles o conecta con Internet.
+UC-VPN-001,Acceso VPN de un proveedor fuera de horario o desde un origen nuevo,VPN,medium,Initial Access,T1133,External Remote Services,RB-03,Conexión de una cuenta externa fuera de su ventana contractual o desde una IP no habitual.

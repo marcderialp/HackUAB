@@ -1,0 +1,9 @@
+tienda,nombre,ciudad,red
+T01,Barcelona Sants,Barcelona,10.30.1.0/24
+T02,Barcelona Glòries,Barcelona,10.30.2.0/24
+T03,Terrassa Centre,Terrassa,10.30.3.0/24
+T04,Mataró Parc,Mataró,10.30.4.0/24
+T05,Reus Mercadal,Reus,10.30.5.0/24
+T06,Manresa Born,Manresa,10.30.6.0/24
+T07,Lleida Seu Vella,Lleida,10.30.7.0/24
+T08,Madrid Chamberí,Madrid,10.30.8.0/24

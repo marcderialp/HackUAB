@@ -1,0 +1,20 @@
+{"alert_id": "ALR-20261013-700212", "pattern": "SQL Injection Attack Detected via libinjection | blocked", "reason": "context differs from the representative: approved_change"}
+{"alert_id": "ALR-20261014-700222", "pattern": "SQL Injection Attack Detected via libinjection | blocked", "reason": "context differs from the representative: approved_change"}
+{"alert_id": "ALR-20261015-700217", "pattern": "SQL Injection Attack Detected via libinjection | blocked", "reason": "context differs from the representative: approved_change"}
+{"alert_id": "ALR-20261013-700215", "pattern": "PHP Injection | blocked", "reason": "context differs from the representative: approved_change"}
+{"alert_id": "ALR-20261014-700225", "pattern": "PHP Injection | blocked", "reason": "context differs from the representative: approved_change"}
+{"alert_id": "ALR-20261015-700220", "pattern": "PHP Injection | blocked", "reason": "context differs from the representative: approved_change"}
+{"alert_id": "ALR-20261013-700221", "pattern": "Remote Command Execution | blocked", "reason": "context differs from the representative: approved_change"}
+{"alert_id": "ALR-20261014-700216", "pattern": "Remote Command Execution | blocked", "reason": "context differs from the representative: approved_change"}
+{"alert_id": "ALR-20261015-700226", "pattern": "Remote Command Execution | blocked", "reason": "context differs from the representative: approved_change"}
+{"alert_id": "ALR-20261013-700224", "pattern": "Scanner Detection | blocked", "reason": "context differs from the representative: approved_change"}
+{"alert_id": "ALR-20261014-700219", "pattern": "Scanner Detection | blocked", "reason": "context differs from the representative: approved_change"}
+{"alert_id": "ALR-20261015-700214", "pattern": "Scanner Detection | blocked", "reason": "context differs from the representative: approved_change"}
+{"alert_id": "ALR-20261012-700065", "pattern": "iPhone corporativo (MDM) | 0", "reason": "context differs from the representative: hr_vacation"}
+{"alert_id": "ALR-20261012-700052", "pattern": "iPhone corporativo (MDM) | 0", "reason": "context differs from the representative: hr_vacation"}
+{"alert_id": "ALR-20261013-700054", "pattern": "iPhone corporativo (MDM) | 0", "reason": "context differs from the representative: hr_new_hire"}
+{"alert_id": "ALR-20261014-700018", "pattern": "boletin@formacion-retail.example", "reason": "context differs from the representative: hr_leaving"}
+{"alert_id": "ALR-20261014-700023", "pattern": "boletin@formacion-retail.example", "reason": "context differs from the representative: hr_vacation"}
+{"alert_id": "ALR-20261013-700218", "pattern": "OS File Access Attempt | blocked", "reason": "context differs from the representative: approved_change"}
+{"alert_id": "ALR-20261014-700213", "pattern": "OS File Access Attempt | blocked", "reason": "context differs from the representative: approved_change"}
+{"alert_id": "ALR-20261015-700223", "pattern": "OS File Access Attempt | blocked", "reason": "context differs from the representative: approved_change"}

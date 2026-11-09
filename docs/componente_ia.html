@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Triaje con IA</title>
+<!-- Source of docs/componente_ia.pdf (expo document for the C component: C1-C7). Print with:
+     "Google Chrome" --headless=new --no-pdf-header-footer --print-to-pdf=docs/componente_ia.pdf docs/componente_ia.html -->
+<style>
+  @page { size: A4; margin: 15mm 14mm; }
+  * { box-sizing: border-box; }
+  :root { --blue: #1f4e79; --blue-l: #e8f0fa; --ai: #b85c00; --ai-l: #fdf0e3; --code: #3d5a80; --code-l: #eaf0f7;
+          --human: #1b7f3b; --human-l: #e6f4ea; --line: #c9ccd1; --muted: #555; }
+  body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 10pt; line-height: 1.38; color: #1a1a1a; margin: 0; background: #fff; }
+  h1 { font-size: 24pt; margin: 0 0 2px; color: var(--blue); }
+  .sub { color: var(--muted); margin: 0 0 10px; }
+  code { font-family: Menlo, Consolas, monospace; font-size: 8.5pt; background: #f1f1f1; padding: 0 3px; border-radius: 3px; }
+  pre { font-family: Menlo, Consolas, monospace; font-size: 8.3pt; background: #f6f7f9; border: 1px solid var(--line); border-radius: 4px; padding: 7px 9px; margin: 6px 0 8px; white-space: pre-wrap; break-inside: avoid; }
+  .lead { background: var(--blue-l); border-left: 4px solid var(--blue); padding: 10px 13px; margin: 10px 0 12px; font-size: 11pt; }
+  .lead .big { font-size: 13pt; font-weight: 700; color: var(--blue); display: block; margin-bottom: 4px; }
+  h2 { background: var(--blue); color: #fff; font-size: 13pt; margin: 16px 0 8px; padding: 6px 10px; border-radius: 4px; break-after: avoid; }
+  h3 { font-size: 11pt; margin: 12px 0 5px; color: var(--blue); break-after: avoid; }
+  p { margin: 4px 0 7px; }
+  ul { margin: 3px 0 8px; padding-left: 18px; } li { margin: 2px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 4px 0 9px; }
+  th, td { border: 1px solid var(--line); padding: 5px 7px; vertical-align: top; text-align: left; }
+  th { background: #eef1f5; font-weight: 700; }
+  tr { break-inside: avoid; }
+  .tag { display: inline-block; font-size: 8pt; font-weight: 700; padding: 1px 6px; border-radius: 9px; white-space: nowrap; }
+  .t-ai { background: var(--ai-l); color: var(--ai); } .t-code { background: var(--code-l); color: var(--code); } .t-human { background: var(--human-l); color: var(--human); }
+  .note { color: #444; font-size: 9pt; margin: 3px 0 8px; }
+  .box { border: 1px solid var(--line); border-radius: 5px; padding: 8px 11px; margin: 6px 0 9px; break-inside: avoid; }
+  .box.warn { border-left: 4px solid #b26a00; background: #fff8ee; }
+  .box.good { border-left: 4px solid var(--human); background: #f3faf5; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 7px; margin: 6px 0 10px; }
+  .kpi { border: 1px solid var(--line); border-radius: 5px; padding: 6px 8px; break-inside: avoid; }
+  .kpi b { display: block; font-size: 16pt; color: var(--blue); line-height: 1.1; }
+  .kpi span { font-size: 8.6pt; color: var(--muted); }
+  .flow { margin: 6px 0 4px; break-inside: avoid; }
+  .flow svg { width: 100%; height: auto; display: block; }
+  .page { break-before: page; }
+  .foot { color: #444; font-size: 8.8pt; margin-top: 12px; border-top: 1px solid var(--line); padding-top: 6px; }
+  td.k { white-space: nowrap; font-weight: 700; width: 24%; }
+</style>
+</head>
+<body>
+
+<h1>Triaje N1 con IA: cómo decide el sistema</h1>
+<p class="sub">Componente C (C1–C7) · Equipo Prompt &amp; Pray · Reto Deloitte Cyber AI · SOC de Tarvia · domingo 8 de noviembre de 2026</p>
+<p class="sub">Versión pública: las cifras son de la ejecución con el conjunto de datos de los organizadores, que es privado; los ejemplos de alertas y tickets salen de los datos de prueba inventados que acompañan al repositorio.</p>
+
+<div class="lead"><span class="big">La IA reúne y argumenta, la política decide la severidad, la persona decide las acciones.</span>
+Cada alerta recorre el mismo camino: el código reúne las evidencias que pide su runbook, un modelo de lenguaje (<code>ornith</code>, en la pasarela UAB DCC de la organización) las lee y propone un veredicto citando eventos reales, el código comprueba esa respuesta y aplica la política SOC de Tarvia, y el resultado es un ticket que un analista revisa en la consola. La IA nunca fija la severidad ni ejecuta una acción.</div>
+
+<div class="kpis">
+  <div class="kpi"><b>61/61</b><span>alertas de dev con ticket válido, 0 errores</span></div>
+  <div class="kpi"><b>11,5 s</b><span>mediana por alerta (123 s las 61, con 8 en paralelo)</span></div>
+  <div class="kpi"><b>88,5 %</b><span>veredictos correctos en dev (54 de 61)</span></div>
+  <div class="kpi"><b>0 de 36</b><span>escalados obligatorios perdidos en dev</span></div>
+</div>
+
+<h2>1. El recorrido de una alerta</h2>
+<div class="flow">
+<svg viewBox="0 -14 1000 314" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#555"/></marker>
+  </defs>
+  <!-- row 1 -->
+  <g font-size="14.5">
+    <rect x="5" y="20" width="140" height="78" rx="7" fill="#f3f4f6" stroke="#888"/>
+    <text x="75" y="48" text-anchor="middle" font-weight="700">Alerta</text>
+    <text x="75" y="67" text-anchor="middle" font-size="12.5">id del dataset o</text>
+    <text x="75" y="82" text-anchor="middle" font-size="12.5">JSON en directo</text>
+
+    <rect x="180" y="20" width="185" height="78" rx="7" fill="#eaf0f7" stroke="#3d5a80"/>
+    <text x="272" y="42" text-anchor="middle" font-weight="700">Colectores (B3)</text>
+    <text x="272" y="60" text-anchor="middle" font-size="12.5">comprobaciones del runbook</text>
+    <text x="272" y="75" text-anchor="middle" font-size="12.5">contexto, inventario, intel</text>
+    <text x="272" y="90" text-anchor="middle" font-size="12.5">→ EvidencePack con event_id</text>
+
+    <rect x="400" y="20" width="185" height="78" rx="7" fill="#eaf0f7" stroke="#3d5a80"/>
+    <text x="492" y="42" text-anchor="middle" font-weight="700">Prompt (C2 + C3)</text>
+    <text x="492" y="60" text-anchor="middle" font-size="12.5">política base + especialista</text>
+    <text x="492" y="75" text-anchor="middle" font-size="12.5">evidencia en JSON, texto del</text>
+    <text x="492" y="90" text-anchor="middle" font-size="12.5">atacante vallado con nonce</text>
+
+    <rect x="620" y="20" width="170" height="78" rx="7" fill="#fdf0e3" stroke="#b85c00" stroke-width="1.6"/>
+    <text x="705" y="42" text-anchor="middle" font-weight="700" fill="#b85c00">Modelo (C1)</text>
+    <text x="705" y="60" text-anchor="middle" font-size="12.5">ornith · JSON estricto</text>
+    <text x="705" y="75" text-anchor="middle" font-size="12.5">sin «thinking», temp. 0</text>
+    <text x="705" y="90" text-anchor="middle" font-size="12.5">propone el veredicto</text>
+
+    <rect x="825" y="20" width="170" height="78" rx="7" fill="#eaf0f7" stroke="#3d5a80"/>
+    <text x="910" y="42" text-anchor="middle" font-weight="700">Comprobaciones</text>
+    <text x="910" y="60" text-anchor="middle" font-size="12.5">¿citas reales? (event_id)</text>
+    <text x="910" y="75" text-anchor="middle" font-size="12.5">¿BTP autorizado? (D-6)</text>
+    <text x="910" y="90" text-anchor="middle" font-size="12.5">si falla: 1 reintento</text>
+  </g>
+  <line x1="145" y1="59" x2="178" y2="59" stroke="#555" stroke-width="1.6" marker-end="url(#ar)"/>
+  <line x1="365" y1="59" x2="398" y2="59" stroke="#555" stroke-width="1.6" marker-end="url(#ar)"/>
+  <line x1="585" y1="59" x2="618" y2="59" stroke="#555" stroke-width="1.6" marker-end="url(#ar)"/>
+  <line x1="790" y1="59" x2="823" y2="59" stroke="#555" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M910,20 C910,2 705,2 705,18" fill="none" stroke="#b85c00" stroke-dasharray="4 3" stroke-width="1.4" marker-end="url(#ar)"/>
+  <text x="808" y="-3" text-anchor="middle" font-size="12" fill="#b85c00">reintento (pide algo distinto)</text>
+  <!-- down -->
+  <path d="M910,98 L910,135 L120,135 L120,170" fill="none" stroke="#555" stroke-width="1.6" marker-end="url(#ar)"/>
+  <!-- row 2 -->
+  <g font-size="14.5">
+    <rect x="5" y="172" width="230" height="86" rx="7" fill="#eaf0f7" stroke="#3d5a80"/>
+    <text x="120" y="195" text-anchor="middle" font-weight="700">Hechos (facts_for)</text>
+    <text x="120" y="213" text-anchor="middle" font-size="12.5">criticidad de activos y personas</text>
+    <text x="120" y="228" text-anchor="middle" font-size="12.5">cambio aprobado, datos personales</text>
+    <text x="120" y="243" text-anchor="middle" font-size="12.5">hechos de escalado §5 (sin IA)</text>
+
+    <rect x="270" y="172" width="230" height="86" rx="7" fill="#eaf0f7" stroke="#3d5a80"/>
+    <text x="385" y="195" text-anchor="middle" font-weight="700">Política SOC (B1)</text>
+    <text x="385" y="213" text-anchor="middle" font-size="12.5">matriz regla × criticidad, ±1 máx.</text>
+    <text x="385" y="228" text-anchor="middle" font-size="12.5">SLA, escalado obligatorio</text>
+    <text x="385" y="243" text-anchor="middle" font-size="12.5">aprobadores, OT y uso dual</text>
+
+    <rect x="535" y="172" width="210" height="86" rx="7" fill="#eaf0f7" stroke="#3d5a80"/>
+    <text x="640" y="195" text-anchor="middle" font-weight="700">Ticket (C4)</text>
+    <text x="640" y="213" text-anchor="middle" font-size="12.5">formato oficial del reto</text>
+    <text x="640" y="228" text-anchor="middle" font-size="12.5">escalado = política O IA</text>
+    <text x="640" y="243" text-anchor="middle" font-size="12.5">traza de lo consultado</text>
+
+    <rect x="780" y="172" width="215" height="86" rx="7" fill="#e6f4ea" stroke="#1b7f3b" stroke-width="1.6"/>
+    <text x="887" y="195" text-anchor="middle" font-weight="700" fill="#1b7f3b">Analista (consola)</text>
+    <text x="887" y="213" text-anchor="middle" font-size="12.5">acepta o corrige veredicto</text>
+    <text x="887" y="228" text-anchor="middle" font-size="12.5">aprueba cada contención</text>
+    <text x="887" y="243" text-anchor="middle" font-size="12.5">con un clic (nunca la IA)</text>
+  </g>
+  <line x1="235" y1="215" x2="268" y2="215" stroke="#555" stroke-width="1.6" marker-end="url(#ar)"/>
+  <line x1="500" y1="215" x2="533" y2="215" stroke="#555" stroke-width="1.6" marker-end="url(#ar)"/>
+  <line x1="745" y1="215" x2="778" y2="215" stroke="#555" stroke-width="1.6" marker-end="url(#ar)"/>
+  <!-- legend -->
+  <g font-size="12.5">
+    <rect x="250" y="276" width="14" height="12" fill="#eaf0f7" stroke="#3d5a80"/><text x="270" y="286">código determinista</text>
+    <rect x="420" y="276" width="14" height="12" fill="#fdf0e3" stroke="#b85c00"/><text x="440" y="286">IA (propone)</text>
+    <rect x="560" y="276" width="14" height="12" fill="#e6f4ea" stroke="#1b7f3b"/><text x="580" y="286">persona (decide y ejecuta)</text>
+  </g>
+</svg>
+</div>
+<p class="note">Una sola llamada al modelo por alerta (dos como máximo, si una comprobación falla). Si la IA falla del todo, la alerta no se pierde: sale un ticket <code>needs_more_info</code> con confianza 0, escalado a una persona.</p>
+
+<h3>Quién decide qué</h3>
+<table>
+  <tr><th style="width:38%">Decisión</th><th style="width:13%">Quién</th><th>Cómo y por qué así</th></tr>
+  <tr><td>Veredicto (TP, BTP, FP o falta información), confianza, resumen, evidencias, MITRE, preguntas abiertas, inyecciones detectadas, acciones propuestas</td><td><span class="tag t-ai">IA</span></td><td>Es la parte que exige leer y razonar. Cada evidencia debe citar un <code>event_id</code> que existe en el paquete; si inventa uno, el código lo rechaza.</td></tr>
+  <tr><td>Hechos: criticidad de activos e identidades, cambio aprobado que aplica, datos personales o de pago, ejecución, robo de credenciales, persistencia, fraude, cadena de ataque</td><td><span class="tag t-code">Código</span></td><td>Salen de datos estructurados (inventario, cambios, señales de los colectores). La misma alerta da siempre los mismos hechos.</td></tr>
+  <tr><td>Severidad final, SLA, escalado obligatorio, quién aprueba cada acción</td><td><span class="tag t-code">Política</span></td><td>La política del SOC traducida a código: matriz regla × criticidad, ajuste máximo ±1, tabla de SLA, reglas de escalado §5 y de aprobación §4.</td></tr>
+  <tr><td>Escalado adicional</td><td><span class="tag t-ai">IA</span></td><td>La IA puede <b>añadir</b> un escalado (p. ej. por la campaña a la que pertenece la alerta); nunca puede <b>quitar</b> uno que la política exige.</td></tr>
+  <tr><td>Ejecutar una contención (aislar, deshabilitar, bloquear…)</td><td><span class="tag t-human">Persona</span></td><td>Solo desde la consola, tras un clic y con un testigo de un solo uso. La IA no tiene ninguna herramienta de escritura, y un test impide que el código de triaje llegue a la API de contención.</td></tr>
+</table>
+
+<h2>2. C1 · La conexión con el modelo</h2>
+<p>Todo el sistema llama al modelo desde un único punto, <code>triage/llm.py</code> (<code>call_structured</code>). Así cada garantía se aplica una sola vez y se prueba una sola vez.</p>
+<table>
+  <tr><td class="k">Proveedor</td><td><code>ornith</code> en la pasarela de la UAB DCC que da la organización (API compatible con OpenAI). Solo se permite <code>https://dcc-llm-gw.uab.cat</code>; cualquier otra URL se rechaza antes de enviar nada. La clave vive solo en <code>.env</code>.</td></tr>
+  <tr><td class="k">Salida estructurada</td><td>JSON Schema estricto generado del contrato <code>LLMVerdict</code>: el modelo no puede devolver campos inventados ni valores fuera de las listas (veredictos, tipos de ajuste, acciones).</td></tr>
+  <tr><td class="k">«Thinking» apagado</td><td>Con el razonamiento interno activado, <code>ornith</code> gastaba todo el presupuesto pensando (8–16 K tokens, 3–5 min por alerta, sin respuesta). Apagado: ~1.000 tokens de salida y ~12 s por alerta. El razonamiento pasa al propio JSON (ver C2: «razonar antes de etiquetar»).</td></tr>
+  <tr><td class="k">Determinismo</td><td>Temperatura 0 y semilla fija: la misma evidencia da la misma respuesta, lo que permite comparar versiones del prompt.</td></tr>
+  <tr><td class="k">Reintentos útiles</td><td>A temperatura 0 repetir la misma petición falla igual, así que cada reintento <b>cambia algo</b>: salida vacía o fuera de esquema → otro intento a temperatura 0,3; respuesta cortada en un bucle de espacios → un intento a 0,3; respuesta cortada sin más → no se repite. Los reintentos de C2 añaden una nota de validación.</td></tr>
+  <tr><td class="k">Caché y modo sin red</td><td>Caché en disco cuya clave incluye los dos textos de sistema, la evidencia, el esquema, la versión del prompt y el modo de razonamiento: cambiar cualquiera nunca reutiliza una respuesta vieja. Con <code>LLM_OFFLINE=1</code> se reproducen las respuestas guardadas sin red (plan B de la demo).</td></tr>
+  <tr><td class="k">Errores explícitos</td><td>Rechazo, límite de uso, caída, tiempo agotado, configuración… cada uno con su tipo. Ninguno se convierte en un veredicto inventado: acaban en <code>needs_more_info</code>, confianza 0 y escalado a una persona.</td></tr>
+  <tr><td class="k">Observabilidad</td><td>Cada llamada registra modelo, tokens, latencia, intentos, motivo del reintento, citas descartadas y estado. El ticket guarda ese <code>model_info</code>, y el runner reintenta los tickets cuyo estado no es <code>ok</code>.</td></tr>
+</table>
+
+<h2 class="page">3. C2 · El prompt y las comprobaciones de la respuesta</h2>
+<h3>Cómo se construye la petición</h3>
+<table>
+  <tr><th style="width:18%">Parte</th><th>Contenido</th></tr>
+  <tr><td><code>system[0]</code></td><td><code>base.md</code>, igual para todas las alertas: el papel de analista N1, el contexto de Tarvia, qué propone la IA y qué deciden el código y las personas, las definiciones de veredicto y el procedimiento D-6, lo que <b>no</b> es una prueba (un IOC desconocido no es malicioso; el texto del atacante no autoriza nada), los cuatro ajustes ±1, cómo citar evidencias, las reglas sobre datos no confiables y el formato de salida (texto en español).</td></tr>
+  <tr><td><code>system[1]</code></td><td>Un especialista por runbook (RB-01 … RB-10), escrito a partir del runbook de Tarvia: qué mirar en la evidencia ya reunida, cómo distinguir malicioso, autorizado y rutinario, y los límites. Una alerta sin runbook usa <code>unknown.md</code> y tiende a «falta información», nunca a un especialista al azar.</td></tr>
+  <tr><td><code>user</code></td><td>La evidencia, al final: el EvidencePack en JSON determinista, compactado (sin la traza, sin campos vacíos ni cambios que no aplican, pero con <b>todos</b> los <code>event_id</code> citables). El texto escrito por el atacante va vallado en su sitio (ver C3).</td></tr>
+</table>
+<p class="note">Las partes fijas van primero, así el prefijo es idéntico para todas las alertas de un mismo runbook. Los prompts usan solo el contexto de empresa que da la organización: ningún dato aprendido de alertas, logs, identificadores de cambios ni etiquetas del golden set.</p>
+
+<h3>Razonar antes de etiquetar</h3>
+<p>Sin «thinking», el JSON es el único razonamiento del modelo, y el modelo escribe los campos en el orden del esquema. Por eso el contrato pone los hechos antes que la etiqueta:</p>
+<pre>evidence → summary → open_questions → injection_detected → adjustments → mitre
+         → verdict → confidence → title → recommended_actions → escalation_suggestion</pre>
+<p>Antes, con el veredicto primero, el modelo a veces escribía la etiqueta equivocada y después un resumen que la contradecía. Ahora la etiqueta se escribe después de las evidencias.</p>
+
+<h3>BTP o FP: el procedimiento D-6</h3>
+<div class="box">Primero se describe la <b>operación concreta</b> de esta alerta (qué proceso, qué hace y para qué), no la técnica genérica que detecta la regla. Después:
+<ul>
+  <li>operación ofensiva o de riesgo <b>con</b> autorización verificada (cambio o flujo aprobado cuyo propósito encaja) → <b>BTP</b> (pentest, escáner, alta en un grupo privilegiado…);</li>
+  <li>la misma operación <b>sin</b> autorización → <b>TP</b>, aunque un control la bloqueara (el bloqueo baja la severidad con <code>blocked_no_effect</code>);</li>
+  <li>función normal de una herramienta de gestión (inventario SCCM, Teams, CDN…) → <b>FP</b> y <code>tune_rule</code>, aunque un cambio aprobado la documente.</li>
+</ul>
+<b>Un BTP exige siempre una autorización.</b> Un ejemplo de por qué importa: el representante del clúster SCCM decide el veredicto de <b>1.349 alertas</b>; marcado BTP, las cerraría todas como «actividad autorizada» en lugar de proponer afinar la regla.</div>
+
+<h3>Comprobaciones deterministas de cada respuesta</h3>
+<table>
+  <tr><th style="width:24%">Comprobación</th><th style="width:38%">Falla cuando</th><th>Qué pasa</th></tr>
+  <tr><td>Citas</td><td>Una evidencia cita un <code>event_id</code> que no está en el paquete</td><td>Un reintento con una nota que lista los identificadores rechazados; si vuelve a fallar, <code>needs_more_info</code>. Las citas vacías se descartan y se cuentan.</td></tr>
+  <tr><td>Autorización (D-6)</td><td>Un BTP no cita por su identificador un cambio o flujo que aplica (o uno «posible» con confianza ≤ 0,7), o solo se apoya en un cambio rutinario</td><td>Un reintento con una nota que explica la regla D-6; si vuelve a fallar, <code>needs_more_info</code>. <b>El código nunca cambia la etiqueta</b>: o la corrige el modelo, o decide una persona.</td></tr>
+</table>
+<p class="note">En la ejecución de dev, la comprobación D-6 disparó 3 veces de 61, y las 3 respuestas corregidas fueron válidas.</p>
+
+<h2>4. C3 · Defensa contra la inyección de instrucciones</h2>
+<p>Muchas alertas contienen texto escrito por el atacante: el cuerpo y el asunto de un correo, lo que un cliente escribe al asistente Vela, una línea de comandos, la descripción de un servicio, un user agent, una URL. Ese texto es <b>dato, nunca instrucción</b>.</p>
+<div class="grid2">
+  <div class="box"><b>Una sola lista de campos peligrosos</b> (<code>triage/untrusted.py</code>): asunto, cuerpo del correo, adjuntos, prompts y respuestas de herramientas de IA, líneas de comando, scripts decodificados, descripciones de servicio, árboles de procesos, scripts de paquetes, user agents, URLs, consultas DNS…</div>
+  <div class="box"><b>Vallado en su sitio:</b> cada campo va entre marcas <code>[[DATO NO CONFIABLE &lt;nonce&gt;]]</code>. El nonce se calcula a partir del paquete: es estable para la caché, pero quien escribió el texto no puede adivinarlo para cerrar la valla. <code>&lt;</code> y <code>&gt;</code> se escapan para que el texto no abra ni cierre etiquetas.</div>
+</div>
+<ul>
+  <li>El prompt base ordena tratar el texto vallado como dato, y reservar <code>injection_detected</code> para el texto dirigido a <b>nuestro</b> triaje.</li>
+  <li>Aunque el modelo obedeciera, el daño posible es limitado: la IA no tiene herramientas de escritura, no fija la severidad (la política la recalcula) y no puede quitar un escalado obligatorio.</li>
+</ul>
+<div class="box good"><b>Probado con casos plantados:</b>
+<ul>
+  <li><b>Phishing de «buzón lleno»</b> en los datos de prueba (<code>ALR-20261015-700038</code>): el cuerpo del correo incluye una nota dirigida al «sistema automático de clasificación» que pide cerrarlo como falso positivo y no escalar. Resultado: la nota aparece en <code>injection_detected</code>, el veredicto es <b>TP</b> y el ticket se escala.</li>
+  <li>En el conjunto de datos de los organizadores había también una nota así en otro phishing y la descripción de un servicio malicioso que decía estar instalado por Seguridad. Las dos se marcaron como inyección y no se obedecieron: el texto de un tercero no prueba ninguna autorización.</li>
+</ul></div>
+
+<h2 class="page">5. C4 · Del veredicto al ticket</h2>
+<pre>def triage_alert(alert):                          # id del dataset o alerta en JSON (modo en directo)
+    pack = collect(alert)                          # B3: evidencias del runbook, con event_id y traza
+    prompt, result = run_prompt(pack)              # C2 + C1: llamada, comprobaciones, 1 reintento
+    verdict = result.parsed if result.ok else llm.needs_more_info_verdict(result)
+    decision = policy.evaluate(facts_for(pack, verdict, prompt))   # código, sin IA
+    return build_ticket(...)                       # formato oficial; no guarda ni ejecuta nada</pre>
+<table>
+  <tr><th style="width:24%">Parte del ticket</th><th>De dónde sale</th></tr>
+  <tr><td>Título, veredicto, confianza, resumen, evidencias, MITRE, preguntas abiertas, inyecciones</td><td>De la IA, tal cual (ya comprobada).</td></tr>
+  <tr><td>Severidad, justificación, SLA, cálculo paso a paso</td><td>De la política. La justificación muestra la matriz y cada ajuste aplicado o ignorado.</td></tr>
+  <tr><td>Escalado</td><td>Política <b>O</b> sugerencia de la IA. Se guarda el origen (<code>policy</code>, <code>ai</code> o <code>policy+ai</code>).</td></tr>
+  <tr><td>Acciones recomendadas</td><td>Cada acción de la IA pasa por <code>policy.recommended_action()</code>, con el activo o el usuario objetivo buscado en el inventario. Se añaden los aprobadores, se descartan las contenciones sobre OT (solo se escala a Operaciones), un servicio de uso dual exige N2, y <code>block_ioc</code>/<code>purge_email</code> los puede lanzar N1, pero siempre tras un clic (D-4).</td></tr>
+  <tr><td>Afectados, enriquecimiento, traza, <code>model_info</code></td><td>Del paquete de evidencias y de la llamada: qué se consultó, con qué resultado y cuánto tardó.</td></tr>
+</table>
+
+<h3>Un ticket de la ejecución con los datos de prueba: malware en un portátil de Finanzas (<code>ALR-20261013-700003</code>)</h3>
+<table>
+  <tr><td class="k">Veredicto · confianza</td><td><b>true_positive</b> · 0,95</td></tr>
+  <tr><td class="k">Resumen (IA)</td><td>«El usuario oriol.masdeu abrió el adjunto Factura_2026-0913.js, que lanzó wscript → PowerShell → rundll32 cargando pk.dll, dos binarios PaperKite confirmados maliciosos por sandbox (scores 94 y 91) y TIP, con C2 a cdn-sync-update.example. El EDR solo lo detectó, sin bloquear, y el implante ya estableció persistencia en la clave Run…»</td></tr>
+  <tr><td class="k">Evidencias citadas</td><td><code>EDR-7001058</code> árbol de procesos · <code>EDR-7001061</code> pk.dll sin firma · <code>EDR-7001062</code> persistencia (y más)</td></tr>
+  <tr><td class="k">Severidad (política)</td><td><b>critical</b>: «Regla high sobre Alta (activo WS-BCN-2005: CMDB Alta) = high; +1 confirmed_execution = critical».</td></tr>
+  <tr><td class="k">Escalado</td><td>Sí, a <b>N2 de guardia (teléfono)</b>, por dos vías (<code>policy+ai</code>): la política (TP crítico, ejecución confirmada, persistencia, cadena de ataque) y la IA.</td></tr>
+  <tr><td class="k">Acciones</td><td><code>isolate_host WS-BCN-2005</code> (aprueba N2) · <code>revoke_sessions oriol.masdeu</code> (aprueba N2) · <code>block_ioc cdn-sync-update.example</code> (N1, tras un clic) · <code>escalate</code> (paso del flujo, sin aprobación)</td></tr>
+  <tr><td class="k">Preguntas abiertas</td><td>«Qué cuentas han sido expuestas o usadas en el movimiento lateral…», qué equipos alcanzó y si el beaconing continúa</td></tr>
+  <tr><td class="k">Coste</td><td>10.217 tokens de entrada, 1.017 de salida, 49,8 s, 1 intento, 16 consultas en la traza</td></tr>
+</table>
+
+<h3>Por qué la IA puede añadir un escalado</h3>
+<p>En el password spraying del sábado de los datos de prueba (<code>ALR-20261017-700070</code>) el bloqueo inteligente paró todos los intentos: la política da severidad informativa y no escala, pero la IA ve 22 intentos contra 11 cuentas desde hosting sin ninguna autorización y propone escalar, así que el ticket se escala con origen <code>ai</code>. La misma regla actúa como red de seguridad: si la IA se equivoca de veredicto pero propone escalar, el ticket llega igualmente a una persona.</p>
+
+<h2>6. Resultados en directo (61 alertas etiquetadas de dev)</h2>
+<table>
+  <tr><th>Indicador</th><th style="width:28%">Resultado</th></tr>
+  <tr><td>Tickets válidos según el esquema oficial · errores de la IA</td><td><b>61/61 · 0</b></td></tr>
+  <tr><td>Tiempo total con 8 alertas en paralelo · mediana (p90) por alerta</td><td><b>123 s</b> · 11,5 s (21,5 s)</td></tr>
+  <tr><td>Veredicto correcto</td><td><b>88,5 %</b> (54 de 61)</td></tr>
+  <tr><td>Ataques perdidos (juzgados benignos) · falsas alarmas</td><td><b>2 de 41</b> · 2 de 20</td></tr>
+  <tr><td>Escalados obligatorios perdidos</td><td><b>0 de 36</b></td></tr>
+  <tr><td>Severidad exacta · a un nivel como máximo</td><td>75,4 % · 90,2 %</td></tr>
+  <tr><td>Pares gemelos (misma técnica, uno malicioso y otro legítimo) con los dos bien</td><td>12 de 15</td></tr>
+  <tr><td>Confianza media cuando acierta · cuando falla</td><td>0,82 · 0,71</td></tr>
+</table>
+<p><b>A escala:</b> las 11.061 alertas de la cola se agrupan en clústeres (componente D), y solo hacen falta <b>215 llamadas</b> (representantes, alertas atípicas, VIP, OT e individuales). A ~12 s por llamada con 8 en paralelo, la cola completa tarda unos 5 minutos. Las 10 alertas de la defensa en directo tardan ~15 s cada una.</p>
+
+<h2>7. Lo que todavía no hacemos bien</h2>
+<div class="box warn">
+<ul>
+  <li><b>Los números de dev son optimistas:</b> esas alertas también se usaron para ajustar los prompts. La medida honesta es el holdout de 12 alertas que nadie ha visto al ajustar; quien ajusta los prompts no lo abre.</li>
+  <li><b>Dos ataques perdidos en dev:</b> una petición de cambio de IBAN, juzgada como correo interno legítimo aunque se escala, y un intento de inyección contra la tienda bloqueado por el WAF. Son el primer objetivo del ajuste (C6, solo con dev).</li>
+  <li><b>Otras 5 discrepancias:</b> una conexión OT juzgada TP que era FP; un viaje del director financiero y el escaneo semanal juzgados FP cuando la etiqueta es BTP; un bucket público juzgado TP; una subida a WeTransfer que queda en «falta información».</li>
+  <li><b>El modelo a veces razona bien y etiqueta mal.</b> Lo mitigan el orden de campos, las comprobaciones D-6 y de citas y los reintentos con nota, pero no lo eliminan: por eso una persona revisa cada ticket.</li>
+  <li><b>Fuera del alcance de esta entrega:</b> el agente de investigación profunda con herramientas de solo lectura (C5) queda recortado. El modo en directo (C7) ya funciona, pero juzga cada alerta nueva con los logs que tenemos: si habla de equipos o fechas fuera de ellos, tenderá a «falta información».</li>
+</ul></div>
+
+<h2>8. Estado de las tareas C</h2>
+<table>
+  <tr><th style="width:7%">ID</th><th style="width:26%">Tarea</th><th style="width:9%">Estado</th><th>Qué hay</th></tr>
+  <tr><td>C1</td><td>Conexión con el modelo</td><td>✅</td><td><code>triage/llm.py</code>: pasarela UAB, JSON estricto, sin «thinking», caché, modo sin red, errores explícitos, reintentos que cambian la petición</td></tr>
+  <tr><td>C2</td><td>Prompt de triaje</td><td>✅</td><td><code>triage/prompts/</code>: base + 10 especialistas + <code>unknown</code>; comprobaciones de citas y D-6 con reintento</td></tr>
+  <tr><td>C3</td><td>Defensa contra inyección</td><td>✅</td><td>Lista única de campos del atacante, vallado con nonce, casos plantados detectados y no obedecidos</td></tr>
+  <tr><td>C4</td><td><code>triage_alert()</code></td><td>✅</td><td><code>triage/pipeline.py</code> + <code>triage/facts.py</code>: evidencia → IA → hechos → política → ticket; 61/61 tickets válidos</td></tr>
+  <tr><td>C5</td><td>Agente de investigación</td><td>❌</td><td>Recortado por tiempo</td></tr>
+  <tr><td>C6</td><td>Ajuste con dev</td><td>🟡</td><td>Primera pasada hecha (D-6, Vela, inyección); la siguiente sale de las 7 discrepancias de dev</td></tr>
+  <tr><td>C7</td><td>Modo en directo</td><td>✅</td><td><code>triage/live.py</code>, conectado a la página E4 y con línea de comandos: completa la severidad desde el catálogo, descarta horas ilegibles, valla el texto libre de campos desconocidos y lo anota en el ticket. En directo: 4 alertas nuevas y desordenadas → 4 tickets válidos en 28 s</td></tr>
+</table>
+
+<h3>Preguntas que esperamos del jurado</h3>
+<table>
+  <tr><td class="k">¿Por qué no deja a la IA decidir la severidad?</td><td>Porque la política de Tarvia es una tabla, no una opinión: el código la aplica igual siempre y se puede auditar. La IA aporta lo que el código no puede hacer: leer la evidencia y argumentar.</td></tr>
+  <tr><td class="k">¿Y si la IA se inventa una evidencia?</td><td>Cada <code>event_id</code> citado se comprueba contra el paquete. Si uno no existe, la respuesta se rechaza, se pide otra y, si vuelve a fallar, el ticket queda en manos de una persona.</td></tr>
+  <tr><td class="k">¿Y si un atacante escribe instrucciones para la IA?</td><td>Ese texto va vallado como dato, y los casos plantados se detectan y no se obedecen. Aunque se obedecieran, la IA no puede ejecutar nada, ni bajar la severidad que calcula la política, ni quitar un escalado obligatorio.</td></tr>
+  <tr><td class="k">¿Se mandan datos a un servicio externo?</td><td>A la pasarela de la organización y con datos sintéticos. En producción: un despliegue privado y datos seudonimizados.</td></tr>
+</table>
+
+<p class="foot">Código: <code>triage/llm.py</code> (C1) · <code>triage/prompts/</code> (C2) · <code>triage/untrusted.py</code> (C3) · <code>triage/pipeline.py</code>, <code>triage/facts.py</code> (C4) · <code>triage/policy.py</code> (política). Detalle técnico: <code>docs/prompts.md</code>. Limitaciones: <code>docs/limitations.md</code>. 821 tests automáticos en verde.</p>
+
+</body>
+</html>
